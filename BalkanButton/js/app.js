@@ -2,6 +2,7 @@
     isYoutubePlayerReady: false,
     client: null,
     songs: null,
+    audio: null,
     initialize: function () {
         app.setupYoutube();
         $('#play').click(app.onPlayClick)
@@ -21,9 +22,25 @@
         {
             var i = Math.floor((Math.random() * app.songs.length));
             $('#label').html(app.songs[i].title);
-            app.loadVideo(app.songs[i].ytid, 20, "small");
+            app.playAudio(app.songs[i].url);
             $('body').addClass('ani');
         }
+    },
+
+    playAudio: function(url)
+    {
+        app.audio = new Media(url, app.onAudioSuccess, app.onAudioError);
+        app.audio.play();
+    },
+
+    onAudioSuccess: function()
+    {
+        console.log('audio success');
+    },
+
+    onAudioError: function(error)
+    {
+        console.log(error);
     },
 
     stopVideo: function () {
