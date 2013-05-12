@@ -1,0 +1,69 @@
+﻿
+
+#ytplayer 
+{
+    position:absolute;
+    left:-9000px;
+}
+
+body {
+    background: black;   
+    text-align:center;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+.center
+{
+    margin: 0 auto;
+    width: 200px;
+}
+
+.ani {
+     -moz-animation: cAni 0.5s linear infinite;
+    -o-animation: cAni 0.5s linear infinite;
+    -webkit-animation: cAni 0.5s linear infinite;
+    animation: cAni 0.5s linear infinite;
+}
+
+@-moz-keyframes cAni{
+    100% {background-color:pink;}
+}
+
+@-webkit-keyframes cAni{
+    100% {background-color:pink;}
+}
+
+@keyframes cAni{
+    100% {background-color:pink;}
+}
+
+#label {
+    color: pink;
+    font-size: xx-large;
+    font-weight: bolder;    
+    -webkit-text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+ .round {
+  display: block;
+  background-color: red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(pink), to(red));
+  background-image: -webkit-linear-gradient(top, pink, red); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: white;
+  margin: 36px;
+  width: 144px;
+  height: 144px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px red, inset 0px 2px 3px pink;
+}
+ .round:hover{
+  text-decoration: none;
+  color: white;
+  background: red;
+}
