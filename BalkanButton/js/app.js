@@ -199,7 +199,7 @@ function onPlayerReady(event) {
 
 // This function is called when an error is thrown by the player
 function onPlayerError(errorCode) {
-    alert("An error occured of type:" + errorCode);
+    //console.log("An error occured of type:" + errorCode);
 }
 
 // This function is called when the player changes state
