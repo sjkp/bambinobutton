@@ -6,20 +6,23 @@
     nowPlaying: null,
     animation: true,
     initialize: function () {
-        if (Modernizr.touch)
-        {
-            $('#button').on('touchstart', app.onPlayClick);
-            $('#button').on('touchend', app.onPlayRelease);            
-        }
-        else
-        {
-            $('#button').mousedown(app.onPlayClick);
-            $('#button').mouseup(app.onPlayRelease);
-        }
+     
         
         app.client = new WindowsAzure.MobileServiceClient("https://balkanbutton.azure-mobile.net/", "eAJkLpuPWURCLbufdwDfoJwKUbngAH81");
         app.client.getTable('song').read().done(function (result) {
             app.songs = result;
+            if (Modernizr.touch) {
+                $('#button').on('touchstart', app.onPlayClick);
+                $('#button').on('touchend', app.onPlayRelease);
+            }
+            else {
+                $('#button').mousedown(app.onPlayClick);
+                $('#button').mouseup(app.onPlayRelease);
+            }
+            $('#loading').hide();
+            $('#button').show();
+            app.onWindowResize();
+
         });
 
         $('#animation').click(function () {
@@ -36,7 +39,7 @@
             }
         });
 
-        app.onWindowResize();
+        
         $(window).on('resize', app.onWindowResize);
     },
 
@@ -65,18 +68,12 @@
         that.css('margin-top', '90px');
         that.css('margin-bottom', '0px');
 
-        if (app.songs == null)
-        {
-            app.loadVideo('FZZJeMKJV3M');
-        }
-        else
-        {
-            var i = Math.floor((Math.random() * app.songs.length));
-            app.nowPlaying = i;
-            $('#label').html('Loading song');
-            app.playAudio(app.songs[i].url);
-            console.log('starting');
-        }
+        var i = Math.floor((Math.random() * app.songs.length));
+        app.nowPlaying = i;
+        $('#label').html('Loading song');
+        app.playAudio(app.songs[i].url);
+        //console.log('starting');
+
     },
 
     playAudio: function(url)
@@ -84,7 +81,15 @@
         $('body').removeClass('ani');
         if (app.audio != null)
         {
-            app.audio.stop();
+            if (typeof(app.audio["stop"]) === 'function')
+            {
+                app.audio.stop();
+            }
+            else if (typeof(app.audio['pause']) === 'function')
+            {
+                app.audio.pause();
+                app.audio = null;
+            }
         }
         if (typeof (Media) != 'undefined')
         {
@@ -93,21 +98,29 @@
         }
         else
         {
-            $('#player > source').attr('src', '');
-            $('#player').empty();
-            $('#player').append($('<source src="' + url + '">'));
-            $('#player').on('playing', app.setPlayingLabel);
+            var a = document.createElement('audio');
+            if (!!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''))) {
+                app.audio = new Audio(url);
+                //.onplaying(app.setPlayingLabel);
+                app.audio.play();
+                $(app.audio).on('playing', app.setPlayingLabel);
+            }
+            else
+            {
+                //not support for mp3 playback.
+                $('#label').text('Your browser does not support mp3 audio, try Chrome or Internet Explorer');
+            }
         }
     },
 
     onAudioSuccess: function()
     {
-        console.log('audio success');
+        //console.log('audio success');
     },
 
     onAudioStatus: function(mediaStatus)
     {
-        console.log(mediaStatus);
+        //console.log(mediaStatus);
         if (Media.MEDIA_RUNNING == mediaStatus)
         {
             app.setPlayingLabel();
@@ -126,7 +139,7 @@
 
     onAudioError: function(error)
     {
-        console.log(error);
+        //console.log(error);
     },
 
     stopVideo: function () {
