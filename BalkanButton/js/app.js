@@ -56,7 +56,7 @@
         var that = $(this);
         event.preventDefault();
         that.css('background-position', '0px, 0px');
-        that.css('margin-top', '80px');
+        that.css('margin-top', '40px');
         that.css('margin-bottom', '10px');
     },
 
@@ -65,7 +65,7 @@
         var that = $(this);
         event.preventDefault();
         that.css('background-position', '-355px, 0px');
-        that.css('margin-top', '90px');
+        that.css('margin-top', '50px');
         that.css('margin-bottom', '0px');
 
         var i = Math.floor((Math.random() * app.songs.length));
