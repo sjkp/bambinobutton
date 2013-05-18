@@ -1,4 +1,17 @@
-﻿
+﻿#button {
+    width: 355px;
+    height: 245px;
+    margin: 80px auto;
+    background: url(/img/button.png) no-repeat;
+}
+
+h1 
+{
+    color: pink;
+    font-weight: bolder;    
+    -webkit-text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
 
 #ytplayer 
 {
@@ -7,14 +20,14 @@
 }
 
 body {
-    background: black;   
+    background: white;   
     text-align:center;
     font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 }
 .center
 {
     margin: 0 auto;
-    width: 200px;
+    width: 355px;
 }
 
 .ani {

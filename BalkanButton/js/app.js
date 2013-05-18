@@ -3,17 +3,68 @@
     client: null,
     songs: null,
     audio: null,
+    nowPlaying: null,
+    animation: true,
     initialize: function () {
-        app.setupYoutube();
-        $('#play').click(app.onPlayClick)
+        if (Modernizr.touch)
+        {
+            $('#button').on('touchstart', app.onPlayClick);
+            $('#button').on('touchend', app.onPlayRelease);            
+        }
+        else
+        {
+            $('#button').mousedown(app.onPlayClick);
+            $('#button').mouseup(app.onPlayRelease);
+        }
+        
         app.client = new WindowsAzure.MobileServiceClient("https://balkanbutton.azure-mobile.net/", "eAJkLpuPWURCLbufdwDfoJwKUbngAH81");
         app.client.getTable('song').read().done(function (result) {
             app.songs = result;
         });
+
+        $('#animation').click(function () {
+            var that = $(that);
+            if (this.checked)
+            {
+                app.animation = true;
+                $('body').addClass('ani');
+            }
+            else
+            {
+                app.animation = false;
+                $('body').removeClass('ani');
+            }
+        });
+
+        app.onWindowResize();
+        $(window).on('resize', app.onWindowResize);
     },
+
+    onWindowResize: function()
+    {
+        var wrapper = $('#wrapper');
+
+        var h = $(window).height() - wrapper.height();
+        wrapper.css('margin-top', h / 2 + 'px');
+    },
+
+    onPlayRelease: function(event)
+    {
+        var that = $(this);
+        event.preventDefault();
+        that.css('background-position', '0px, 0px');
+        that.css('margin-top', '80px');
+        that.css('margin-bottom', '10px');
+    },
+
     onPlayClick: function(event)
     {
+        var that = $(this);
         event.preventDefault();
+        that.css('background-position', '-355px, 0px');
+        that.css('margin-top', '90px');
+        that.css('margin-bottom', '0px');
+
         if (app.songs == null)
         {
             app.loadVideo('FZZJeMKJV3M');
@@ -21,21 +72,56 @@
         else
         {
             var i = Math.floor((Math.random() * app.songs.length));
-            $('#label').html(app.songs[i].title);
+            app.nowPlaying = i;
+            $('#label').html('Loading song');
             app.playAudio(app.songs[i].url);
-            $('body').addClass('ani');
+            console.log('starting');
         }
     },
 
     playAudio: function(url)
     {
-        app.audio = new Media(url, app.onAudioSuccess, app.onAudioError);
-        app.audio.play();
+        $('body').removeClass('ani');
+        if (app.audio != null)
+        {
+            app.audio.stop();
+        }
+        if (typeof (Media) != 'undefined')
+        {
+            app.audio = new Media(url, app.onAudioSuccess, app.onAudioError, app.onAudioStatus);
+            app.audio.play();
+        }
+        else
+        {
+            $('#player > source').attr('src', '');
+            $('#player').empty();
+            $('#player').append($('<source src="' + url + '">'));
+            $('#player').on('playing', app.setPlayingLabel);
+        }
     },
 
     onAudioSuccess: function()
     {
         console.log('audio success');
+    },
+
+    onAudioStatus: function(mediaStatus)
+    {
+        console.log(mediaStatus);
+        if (Media.MEDIA_RUNNING == mediaStatus)
+        {
+            app.setPlayingLabel();
+        }
+        
+    },
+
+    setPlayingLabel: function()
+    {
+        var i = app.nowPlaying;
+        $('#label').html(app.songs[i].title);
+        if (app.animation) {
+            $('body').addClass('ani');
+        }
     },
 
     onAudioError: function(error)

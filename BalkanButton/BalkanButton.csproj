@@ -57,10 +57,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config.xml" />
+    <Content Include="css\styles.css" />
+    <Content Include="grunt-tasks\build.js" />
+    <Content Include="gruntfile.js" />
+    <Content Include="img\button.png" />
+    <Content Include="img\cordova.png" />
+    <Content Include="img\logo.png" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
+    <Content Include="lib\cordova\cordova-2.5.0-android.js" />
+    <Content Include="lib\modernizr.js" />
     <Content Include="packages.config" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
+    <Content Include="res\icon\android\icon-36-ldpi.png" />
+    <Content Include="res\icon\android\icon-48-mdpi.png" />
+    <Content Include="res\icon\android\icon-72-hdpi.png" />
+    <Content Include="res\icon\android\icon-96-xhdpi.png" />
+    <Content Include="res\screen\android\screen-hdpi-landscape.png" />
+    <Content Include="res\screen\android\screen-hdpi-portrait.png" />
+    <Content Include="res\screen\android\screen-ldpi-landscape.png" />
+    <Content Include="res\screen\android\screen-ldpi-portrait.png" />
+    <Content Include="res\screen\android\screen-mdpi-landscape.png" />
+    <Content Include="res\screen\android\screen-mdpi-portrait.png" />
+    <Content Include="res\screen\android\screen-xhdpi-landscape.png" />
+    <Content Include="res\screen\android\screen-xhdpi-portrait.png" />
     <Content Include="Scripts\jquery-2.0.0.js" />
     <Content Include="Scripts\jquery-2.0.0.min.js" />
     <Content Include="Web.config" />
