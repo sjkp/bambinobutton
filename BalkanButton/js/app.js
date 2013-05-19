@@ -134,8 +134,10 @@
             {
                 //not support for mp3 playback.
                 $('#label').text('Your browser does not support mp3 audio, try Chrome or Internet Explorer');
+                return;
             }
         }
+        app.client.getTable('playbacklog').insert({ songId: app.songs[app.nowPlaying].id, userAgent: navigator.userAgent });
     },
 
     onCurrentPosition: function()
