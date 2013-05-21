@@ -61,9 +61,11 @@
     <Content Include="css\styles.css" />
     <Content Include="grunt-tasks\build.js" />
     <Content Include="gruntfile.js" />
+    <Content Include="img\applestore.png" />
     <Content Include="img\button.png" />
     <Content Include="img\cordova.png" />
     <Content Include="img\logo.png" />
+    <Content Include="img\promographics.png" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
     <Content Include="lib\cordova\cordova-2.5.0-android.js" />
