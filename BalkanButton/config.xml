@@ -36,6 +36,7 @@
   <preference name="exit-on-suspend" value="false" />
 
   <feature name="http://api.phonegap.com/1.0/media"/>
+  <feature name="http://api.phonegap.com/1.0/network"/>
   <plugins>
     <plugin name="Media" value="org.apache.cordova.AudioHandler"/>
 
