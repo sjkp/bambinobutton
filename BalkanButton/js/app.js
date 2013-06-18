@@ -23,7 +23,7 @@
             $('#loading').hide();
             $('#button').show();
             $('#continuesplay').on('click', app.onContinuesPlayClick);
-            app.onWindowResize();
+            //app.onWindowResize();
 
         });
 
@@ -42,7 +42,7 @@
         });
 
         
-        $(window).on('resize', app.onWindowResize);
+        //$(window).on('resize', app.onWindowResize);
     },
 
     onContinuesPlayClick: function(event)
