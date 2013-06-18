@@ -1,4 +1,4 @@
-﻿/*global module:false*/
+/*global module:false*/
 module.exports = function (grunt) {
 
     // External tasks.
@@ -142,6 +142,21 @@ module.exports = function (grunt) {
                     strip: 'lib/cordova',
                     dest: 'targets/android2/assets/www'
             },
+            copyios: {
+                     src: [
+                           'css/*',
+                           'img/*',
+                           'js/**/*.js',
+                           'lib/**/*.*',
+                           'Scripts/*',
+                           'index.html'
+                           ],
+                     renames: {
+                     'targets/ios/www/cordova-2.7.0-ios.js': 'phonegap.js'
+                     },
+                     strip: 'lib/cordova',
+                     dest: 'targets/ios/www'
+                     },
             dist: {
                 src: [
                     'lib/cordova/cordova-1.8.1-android.js',
@@ -228,6 +243,6 @@ module.exports = function (grunt) {
 
     // Default task.
     //grunt.registerTask('default', 'clean lint concat:dist_javascript concat:dist_less min less copy:dist copy:dist_android copy:dist_ios');
-    grunt.registerTask('default', ['clean', 'jshint','copy:copyandroid']);
+    grunt.registerTask('default', ['clean', 'jshint','copy:copyandroid','copy:copyios']);
 
 };

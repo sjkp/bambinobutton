@@ -6,3 +6,4 @@ packages
 *.user
 App_Data
 node_modules
+.DS_Store
