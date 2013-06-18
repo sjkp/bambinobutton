@@ -82,7 +82,7 @@
     {
         var that = $(this);
         event.preventDefault();
-        that.css('background-position', '-355px, 0px');
+        that.css('background-position', '-320px, 0px');
         that.css('margin-top', '50px');
         that.css('margin-bottom', '0px');
 

@@ -1,6 +1,6 @@
 ﻿#button {
-    width: 355px;
-    height: 245px;
+    width: 320px;
+    height: 221px;
     margin: 40px auto;
     background: url(../img/button.png) no-repeat;
     display:none;
@@ -85,3 +85,11 @@ body {
   color: white;
   background: red;
 }
+
+ @media screen and (max-width: 1024px) 
+ {
+     .appstores
+     {
+         display:none;
+     }
+ }
