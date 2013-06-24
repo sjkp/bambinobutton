@@ -372,6 +372,7 @@
     NSURL* resourceURL = audioFile.resourceURL;
 
     if ([resourceURL isFileURL]) {
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
         audioFile.player = [[CDVAudioPlayer alloc] initWithContentsOfURL:resourceURL error:&playerError];
     } else {
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:resourceURL];
