@@ -116,9 +116,8 @@
         {
             app.audio = new Media(url, app.onAudioSuccess, app.onAudioError, app.onAudioStatus);            
             app.audio.play();
-            if (app.continuesPlay) {
-                clearInterval(app.interval);
-                app.interval = setInterval(app.onCurrentPosition, 1000);
+            if (app.continuesPlay) {               
+                setTimeout(app.onCurrentPosition, 1000);
             }
         }
         else
@@ -142,26 +141,30 @@
 
     onCurrentPosition: function()
     {
-        if (typeof (app.audio['getCurrentPosition']) === 'function') {
-            app.audio.getCurrentPosition(function (position) {
-                if (position > -1) {
-                    if (position >= app.audio.getDuration() && app.continuesPlay) {
-                        var i = Math.floor((Math.random() * app.songs.length));
-                        app.nowPlaying = i;
-                        $('#label').html('Loading song');
-                        app.playAudio(app.songs[i].url);
+        if (app.audio != null) {
+            if (typeof (app.audio['getCurrentPosition']) === 'function') {
+                app.audio.getCurrentPosition(function (position) {
+                    if (position > -1) {
+                        if (position >= app.audio.getDuration() && app.continuesPlay) {
+                            var i = Math.floor((Math.random() * app.songs.length));
+                            app.nowPlaying = i;
+                            $('#label').html('Loading song');
+                            app.playAudio(app.songs[i].url);
+                        }
                     }
-                }
-            });
-        }
-        else
-        {
-            if (app.audio.currentTime >= app.audio.duration && app.continuesPlay) {
-                var i = Math.floor((Math.random() * app.songs.length));
-                app.nowPlaying = i;
-                $('#label').html('Loading song');
-                app.playAudio(app.songs[i].url);
+                });
             }
+            else {
+                if (app.audio.currentTime >= app.audio.duration && app.continuesPlay) {
+                    var i = Math.floor((Math.random() * app.songs.length));
+                    app.nowPlaying = i;
+                    $('#label').html('Loading song');
+                    app.playAudio(app.songs[i].url);
+                }
+            }
+        }
+        if (app.continuesPlay) {
+            setTimeout(app.onCurrentPosition, 1000);
         }
     },
 
