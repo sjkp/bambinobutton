@@ -149,7 +149,8 @@ module.exports = function (grunt) {
                            'js/**/*.js',	
                            'lib/**/*.*',
                            'Scripts/*',
-                           'index.html'
+                           'index.html',
+                           'res/icon/ios/*.*'
                            ],
                      renames: {
                      'targets/ios/www/cordova-2.7.0-ios.js': 'phonegap.js'
