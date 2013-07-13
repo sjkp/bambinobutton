@@ -12,11 +12,15 @@
         app.client = new WindowsAzure.MobileServiceClient("https://balkanbutton.azure-mobile.net/", "eAJkLpuPWURCLbufdwDfoJwKUbngAH81");
         app.client.getTable('song').read().done(function (result) {
             app.songs = result;
-            if (Modernizr.touch) {
+                                                var ios = false;
+                                                var p = navigator.platform;
+                                                if (p ==='iPad' || p === 'iPhone' || 'iPod')
+            if (Modernizr.touch || p) {
                 $('#button').on('touchstart', app.onPlayClick);
                 $('#button').on('touchend', app.onPlayRelease);
             }
             else {
+            
                 $('#button').mousedown(app.onPlayClick);
                 $('#button').mouseup(app.onPlayRelease);
             }
@@ -51,13 +55,11 @@
         if (this.checked)
         {
             app.continuesPlay = true;
-            clearInterval(app.interval);
-            app.interval = setInterval(app.onCurrentPosition, 1000);
+            setTimeout(app.onCurrentPosition, 1000);
         }
         else
         {
             app.continuesPlay = false;
-            clearInterval(app.interval);
         }
     },
 
@@ -81,15 +83,18 @@
     onPlayClick: function(event)
     {
         var that = $(this);
-        event.preventDefault();
+       // event.preventDefault();
         that.css('background-position', '-320px, 0px');
         that.css('margin-top', '50px');
         that.css('margin-bottom', '0px');
 
         var i = Math.floor((Math.random() * app.songs.length));
         app.nowPlaying = i;
+        
         $('#label').html('Loading song');
-        app.playAudio(app.songs[i].url);
+        setTimeout(function() {
+                    app.playAudio(app.songs[i].url);
+                   }, 200);
         //console.log('starting');
 
     },
@@ -144,14 +149,14 @@
         if (app.audio != null) {
             if (typeof (app.audio['getCurrentPosition']) === 'function') {
                 app.audio.getCurrentPosition(function (position) {
-                    if (position > -1) {
-                        if (position >= app.audio.getDuration() && app.continuesPlay) {
+                    
+                        if (position >= app.audio.getDuration() && app.continuesPlay || position == -1) {
                             var i = Math.floor((Math.random() * app.songs.length));
                             app.nowPlaying = i;
                             $('#label').html('Loading song');
                             app.playAudio(app.songs[i].url);
                         }
-                    }
+                    
                 });
             }
             else {
@@ -164,6 +169,9 @@
             }
         }
         if (app.continuesPlay) {
+            /*app.audio.getCurrentPosition(function(position){
+                                         $('#label').html(new Date() + ' *' +position );
+                                         });*/
             setTimeout(app.onCurrentPosition, 1000);
         }
     },
