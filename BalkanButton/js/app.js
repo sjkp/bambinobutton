@@ -12,10 +12,10 @@
         app.client = new WindowsAzure.MobileServiceClient("https://balkanbutton.azure-mobile.net/", "eAJkLpuPWURCLbufdwDfoJwKUbngAH81");
         app.client.getTable('song').read().done(function (result) {
             app.songs = result;
-                                                var ios = false;
-                                                var p = navigator.platform;
-                                                if (p ==='iPad' || p === 'iPhone' || 'iPod')
-            if (Modernizr.touch || p) {
+            var ios = false;
+            var p = navigator.platform;
+            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+
                 $('#button').on('touchstart', app.onPlayClick);
                 $('#button').on('touchend', app.onPlayRelease);
             }
