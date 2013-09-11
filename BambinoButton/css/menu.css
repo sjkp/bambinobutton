@@ -13,22 +13,24 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 80%;
+  width: 200px;
   z-index: 1;
   background: #333;
   overflow: auto;
-  opacity: 0;
-  -webkit-transition: opacity 0s 0.5s;
 }
-#menu ul,
-#favorites ul {
+ul {
   display: block;
   height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
 }
-#menu ul li a,
-#favorites ul li a {
+li.selected {
+  background: #808080;
+}
+li a {
   display: block;
   padding: 10px;
   border-bottom: 1px solid #222;
@@ -40,8 +42,7 @@ body {
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
   background: -moz-linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
-#menu ul li a.active,
-#favorites ul li a.active {
+li a.active {
   background-color: #336c95;
 }
 #favorites {
@@ -53,24 +54,30 @@ body {
 }
 .handler#handler-right:checked ~ #favorites {
   opacity: 1;
-  -webkit-transition: opacity 0s 0s;
-  -moz-transition: opacity 0s 0s;
+  /*-webkit-transition: opacity 0s 0s;
+            -moz-transition: opacity 0s 0s;*/
+
 }
 .handler#handler-right:checked ~ #wrapper {
-  -webkit-transform: translate3D(-80%, 0, 0);
-  -moz-transform: translate3D(-80%, 0, 0);
+  -webkit-transform: translate3D(-200px, 0, 0);
+  -moz-transform: translate3D(-200px, 0, 0);
+  -ms-transform: translate3D(-200px, 0, 0);
+  -transform: translate3D(-200px, 0, 0);
 }
 .handler#handler-right:checked ~ #wrapper #content {
   overflow: hidden;
 }
 .handler#handler-left:checked ~ #menu {
   opacity: 1;
-  -webkit-transition: opacity 0s 0s;
-  -moz-transition: opacity 0s 0s;
+  /*-webkit-transition: opacity 0s 0s;
+            -moz-transition: opacity 0s 0s;*/
+
 }
 .handler#handler-left:checked ~ #wrapper {
-  -webkit-transform: translate3D(80%, 0, 0);
-  -moz-transform: translate3D(80%, 0, 0);
+  -webkit-transform: translate3D(200px, 0, 0);
+  -moz-transform: translate3D(200px, 0, 0);
+  -ms-transform: translate3D(200px, 0, 0);
+  -transform: translate3D(200px, 0, 0);
 }
 .handler#handler-left:checked ~ #wrapper #content {
   overflow: hidden;

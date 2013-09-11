@@ -10,26 +10,7 @@
      
         
         app.client = new WindowsAzure.MobileServiceClient("https://bambinobutton.azure-mobile.net/", "CYLhHjCyzQDkWKvtPhKdqPLUbYWJxl68");
-        app.client.getTable('song').read().done(function (result) {
-            app.songs = result;
-            var ios = false;
-            var p = navigator.platform;
-            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
-
-                $('#button').on('touchstart', app.onPlayClick);
-                $('#button').on('touchend', app.onPlayRelease);
-            }
-            else {
-            
-                $('#button').mousedown(app.onPlayClick);
-                $('#button').mouseup(app.onPlayRelease);
-            }
-            $('#loading').hide();
-            $('#button').show();
-            $('#continuesplay').on('click', app.onContinuesPlayClick);
-            //app.onWindowResize();
-
-        });
+        app.loadSongs(app.language.get());
 
         $('#animation').click(function () {
             var that = $(that);
@@ -45,9 +26,86 @@
             }
         });
 
-        
+        app.language.init();
         //$(window).on('resize', app.onWindowResize);
     },
+
+    loadSongs: function(lan) {
+        app.client.getTable('song').where(function (arr) {
+            return this.language in arr;
+        },lan).read().done(function (result) {
+            app.songs = result;
+            var ios = false;
+            var p = navigator.platform;
+            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+
+                $('#bambinobutton').on('touchstart', app.onPlayClick);
+                $('#bambinobutton').on('touchend', app.onPlayRelease);
+            }
+            else {
+
+                $('#bambinobutton').mousedown(app.onPlayClick);
+                $('#bambinobutton').mouseup(app.onPlayRelease);
+            }
+            $('#loading').hide();
+            $('#bambinobutton').show();
+            $('#continuesplay').on('click', app.onContinuesPlayClick);
+            //app.onWindowResize();
+
+        });
+    },
+
+    language: {
+ 
+        get: function () {
+            var lan = JSON.parse(localStorage.getItem("language"));
+            if (lan == null || lan.length === 0) {
+                lan = ["en-GB"];
+            }
+            return lan;
+        },
+
+        init: function () {
+            var menu = $('#languagemenu');
+            $.ajax({
+                url: 'http://localhost:53217/api/Language', accept: "application/json;charset=utf-8", success: function (res) {
+                    console.log(res);
+                    menu.html(app.languageMenu(res));
+                    $.each(app.language.get(), function (i, o) {
+                        console.log(o);
+                        $('#' + o).addClass('selected');
+                    });
+                                           
+                    $('li', menu).click(function () {
+                        var arr = app.language.get();
+                        if ($('#'+this.id, menu).hasClass('selected'))
+                        {                            
+                            for (var i = arr.length - 1; i >= 0; i--)
+                            {
+                                if (arr[i] === this.id)
+                                {
+                                    arr.splice(i, 1);
+                                }
+                            }                         
+                        }
+                        else
+                        {
+                            arr.push(this.id);
+                            console.log(arr);
+                        }
+                        localStorage.setItem("language", JSON.stringify(arr));
+                        $('#' + this.id, menu).toggleClass('selected');
+                        
+                        console.log(this.id);
+                        
+                        app.loadSongs(app.language.get());
+                    });
+                }
+            });
+        },
+
+       
+    },    
 
     onContinuesPlayClick: function(event)
     {
@@ -232,7 +290,9 @@
     }
 };
 
+app.languageMenu = Handlebars.compile($("#language-menu-tpl").html());
 app.initialize();
+
 
 /* youtube player */
 function onYouTubeIframeAPIReady() {
