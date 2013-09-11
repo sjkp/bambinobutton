@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Bambino.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BambinoStoreContainer">
+          <EntitySet Name="log" EntityType="Bambino.Store.log" store:Type="Tables" Schema="bambinobutton" />
+          <EntitySet Name="playbacklog" EntityType="Bambino.Store.playbacklog" store:Type="Tables" Schema="bambinobutton" />
+          <EntitySet Name="song" EntityType="Bambino.Store.song" store:Type="Tables" Schema="bambinobutton" />
+        </EntityContainer>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="createdOn" Type="datetimeoffset" Precision="3" />
+        </EntityType>
+        <EntityType Name="playbacklog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="songId" Type="float" />
+          <Property Name="userAgent" Type="nvarchar(max)" />
+          <Property Name="createdOn" Type="datetimeoffset" Precision="3" />
+        </EntityType>
+        <EntityType Name="song">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar(max)" />
+          <Property Name="url" Type="nvarchar(max)" />
+          <Property Name="ytid" Type="nvarchar(max)" />
+          <Property Name="language" Type="nvarchar(max)" />
+          <Property Name="free" Type="bit" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Bambino" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="bambino_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="log" EntityType="Bambino.log" />
+          <EntitySet Name="playbacklog" EntityType="Bambino.playbacklog" />
+          <EntitySet Name="song" EntityType="Bambino.song" />
+        </EntityContainer>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="createdOn" Type="DateTimeOffset" Precision="3" />
+        </EntityType>
+        <EntityType Name="playbacklog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="songId" Type="Double" />
+          <Property Name="userAgent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="createdOn" Type="DateTimeOffset" Precision="3" />
+        </EntityType>
+        <EntityType Name="song">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="url" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ytid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="language" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="free" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BambinoStoreContainer" CdmEntityContainer="bambino_dbEntities">
+          <EntitySetMapping Name="log">
+            <EntityTypeMapping TypeName="Bambino.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="playbacklog">
+            <EntityTypeMapping TypeName="Bambino.playbacklog">
+              <MappingFragment StoreEntitySet="playbacklog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="songId" ColumnName="songId" />
+                <ScalarProperty Name="userAgent" ColumnName="userAgent" />
+                <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="song">
+            <EntityTypeMapping TypeName="Bambino.song">
+              <MappingFragment StoreEntitySet="song">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="ytid" ColumnName="ytid" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="free" ColumnName="free" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
