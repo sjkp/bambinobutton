@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml" />
+    <Content Include="css\menu.css">
+      <DependentUpon>menu.less</DependentUpon>
+    </Content>
+    <Content Include="css\menu.min.css">
+      <DependentUpon>menu.less</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="index_mobile.html" />
     <Content Include="css\styles.css" />
@@ -125,6 +131,9 @@
     </Content>
     <Content Include="App_Readme\Handlebarsjs_README.md" />
     <Content Include="App_Readme\Handlebarsjs_LICENSE" />
+    <Content Include="css\menu.less" />
+    <Content Include="connectionStrings.config" />
+    <Content Include="connectionStrings.template.config" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <Content Include="res\icon\android\icon-36-ldpi.png" />
     <Content Include="res\icon\android\icon-48-mdpi.png" />
@@ -219,7 +228,12 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
+  
   -->
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="connectionStrings.template.config"
+    DestinationFiles="HiddenSettings.config" SkipUnchangedFiles="true"
+    Condition="!Exists('HiddenSettings.config')">
+    </Copy>
+  </Target>
 </Project>
