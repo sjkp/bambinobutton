@@ -232,8 +232,8 @@
   -->
   <Target Name="AfterBuild">
     <Copy SourceFiles="connectionStrings.template.config"
-    DestinationFiles="HiddenSettings.config" SkipUnchangedFiles="true"
-    Condition="!Exists('HiddenSettings.config')">
+    DestinationFiles="connectionStrings.config" SkipUnchangedFiles="true"
+    Condition="!Exists('connectionStrings.config')">
     </Copy>
   </Target>
 </Project>
