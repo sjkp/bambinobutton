@@ -157,6 +157,7 @@
     <Content Include="Scripts\jquery-2.0.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DTO\Language.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,9 +232,7 @@
   
   -->
   <Target Name="AfterBuild">
-    <Copy SourceFiles="connectionStrings.template.config"
-    DestinationFiles="connectionStrings.config" SkipUnchangedFiles="true"
-    Condition="!Exists('connectionStrings.config')">
+    <Copy SourceFiles="connectionStrings.template.config" DestinationFiles="connectionStrings.config" SkipUnchangedFiles="true" Condition="!Exists('connectionStrings.config')">
     </Copy>
   </Target>
 </Project>
