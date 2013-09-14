@@ -18,7 +18,6 @@ namespace BalkanButton
         {
             using (var context = new BalkanButton.Models.bambino_dbEntities())
             {
-
                 return context.song.Select(s => s.language).Distinct().ToList().Select(l => 
                     new { Name = new CultureInfo(l).DisplayName, LCID = l }
                     ).ToList();
