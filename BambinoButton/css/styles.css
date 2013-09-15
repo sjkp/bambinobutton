@@ -99,14 +99,8 @@ h1
      }
  }
 
- /*#languagemenu
- {
-     float:left;
- }
-
- #languagemenu > li
- {
-     display: inline-block;
- }*/
+textarea {
+    width:300px;
+}
 
 

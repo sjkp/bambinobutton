@@ -20,15 +20,40 @@
         <li id="{{LCID}}"><a>{{Name}}</a></li>
         {{/.}}
     </script>
+    <script type="text/x-handlebars-template" id="feedback-tmpl">
+        <h1>Feedback</h1>
+       
+        <p>
+        Help us by giving your feedback to expand the collection of songs, requesting new languages or just ideas for further development! 
+        We can’t thank you enough and remember that you’re awesome!
+            </p>
+        <textarea id="feedbacktext" placeholder="Please send suggestions for improvements here." rows="7" />
+        <br />
+        <button id="sendfeedback">Send</button> <span id="feedbackresponse"></span>
+    </script>
+    <script type="text/x-handlebars-template" id="about-tmpl">
+        <h1>About</h1>
+        <p>Bambino button gives children the possibility to listen to children songs from all over the world. Note that all content and copyrights belongs to the representative artists and record companies. We encourage you to buy it if you or your children likes it and appreciative the hardworking people behind this lovely music! We condemn any misuse of this product and it was not the intention of bambino button. Thank you in advance. With that being said, hope that Bambino button brings joy to your family.
+            </p>
+    </script>
 </head>
 <body>
+    <input type="checkbox" name="handler-right" class="handler" id="handler-right" onclick="null" />
+    <input type="checkbox" name="handler-left" class="handler" id="handler-left" onclick="null" />
+
     <div id="menu">
         <ul id="languagemenu"></ul>
     </div>
+    <div id="settings">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Feedback">Feedback</a></li>
+            <li><a href="#Buy">Buy</a></li>
+        </ul>
+    </div>
 
-
-    <input type="checkbox" name="handler-right" class="handler" id="handler-right" onclick="null" />
-    <input type="checkbox" name="handler-left" class="handler" id="handler-left" onclick="null" />
+  
      
     <div id="wrapper">
         
@@ -37,7 +62,7 @@
                 <label for="handler-left" id="left" href="#">Language</label>
             </p>
 
-        <div class="center">
+        <div id="page-1" class="center">
             <img src="img/logo.png" width="320px" />
             <div id="loading">
                 <h1>Loading ...</h1>
@@ -60,16 +85,7 @@
             </script>
             <script type="text/javascript"
                 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
-            <div class="appstores">
-                <a href="https://play.google.com/store/apps/details?id=dk.sjkp.balkanbutton" title="Get it on Google Play">
-                    <img alt="Get it on Google Play"
-                        src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-                </a>
-                <a href="https://itunes.apple.com/us/app/balkan-button/id670733968?mt=8&uo=4" target="itunes_store">
-                    <img src="http://r.mzstatic.com/images/web/linkmaker/badge_appstore-lrg.gif" alt="Balkan Button - SJKP" style="border: 0;" /></a>
-            </div>
-            <div id="disclaimer"></div>
+            </script>                        
         </div>
         
     </div>
@@ -81,6 +97,9 @@
 <script src="Scripts/jquery-2.0.0.min.js"></script>
 <script src="Scripts/handlebars.min.js"></script>
 <script src="https://bambinobutton.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js"></script>
+
+<script src="js/views/feedback.js"></script>
+<script src="js/views/about.js"></script>
 <script src="js/app.js"></script>    
 
 </html>

@@ -8,12 +8,12 @@ body {
   overflow: hidden;
 }
 #menu,
-#favorites {
+#settings {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
+  width: 80%;
   z-index: 1;
   background: #333;
   overflow: auto;
@@ -26,6 +26,9 @@ ul {
   margin: 0;
   list-style-type: none;
   padding: 0;
+}
+li {
+  cursor: pointer;
 }
 li.selected {
   background: #808080;
@@ -45,39 +48,37 @@ li a {
 li a.active {
   background-color: #336c95;
 }
-#favorites {
+#settings {
   left: auto;
   right: 0;
+  display: none;
 }
 .handler {
   display: none;
 }
-.handler#handler-right:checked ~ #favorites {
-  opacity: 1;
-  /*-webkit-transition: opacity 0s 0s;
-            -moz-transition: opacity 0s 0s;*/
-
+.handler#handler-right:checked ~ #settings {
+  display: block;
+  -webkit-transition: opacity 0s 0s;
+  -moz-transition: opacity 0s 0s;
 }
 .handler#handler-right:checked ~ #wrapper {
-  -webkit-transform: translate3D(-200px, 0, 0);
-  -moz-transform: translate3D(-200px, 0, 0);
-  -ms-transform: translate3D(-200px, 0, 0);
-  -transform: translate3D(-200px, 0, 0);
+  -webkit-transform: translate3D(-80%, 0, 0);
+  -moz-transform: translate3D(-80%, 0, 0);
+  -ms-transform: translate3D(-80%, 0, 0);
+  -transform: translate3D(-80%, 0, 0);
 }
 .handler#handler-right:checked ~ #wrapper #content {
   overflow: hidden;
 }
 .handler#handler-left:checked ~ #menu {
-  opacity: 1;
-  /*-webkit-transition: opacity 0s 0s;
-            -moz-transition: opacity 0s 0s;*/
-
+  -webkit-transition: opacity 0s 0s;
+  -moz-transition: opacity 0s 0s;
 }
 .handler#handler-left:checked ~ #wrapper {
-  -webkit-transform: translate3D(200px, 0, 0);
-  -moz-transform: translate3D(200px, 0, 0);
-  -ms-transform: translate3D(200px, 0, 0);
-  -transform: translate3D(200px, 0, 0);
+  -webkit-transform: translate3D(80%, 0, 0);
+  -moz-transform: translate3D(80%, 0, 0);
+  -ms-transform: translate3D(80%, 0, 0);
+  -transform: translate3D(80%, 0, 0);
 }
 .handler#handler-left:checked ~ #wrapper #content {
   overflow: hidden;

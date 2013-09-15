@@ -1,5 +1,6 @@
 ﻿var app = {
     isYoutubePlayerReady: false,
+    baseUrl: 'https://bambinobutton.azurewebsites.net',
     client: null,
     songs: null,
     audio: null,
@@ -17,17 +18,40 @@
             if (this.checked)
             {
                 app.animation = true;
-                $('body').addClass('ani');
+                $('#wrapper').addClass('ani');
             }
             else
             {
                 app.animation = false;
-                $('body').removeClass('ani');
+                $('#wrapper').removeClass('ani');
             }
         });
-
+        $(window).on('hashchange', $.proxy(this.route, this));
+        app.route();
         app.language.init();
+        $('#settings a').click(function () {
+            $('.handler').prop('checked', false);
+        })
         //$(window).on('resize', app.onWindowResize);
+    },
+
+    route: function()
+    {
+        var hash = window.location.hash
+           , main = $('#page-1')
+           , viewname = hash.replace('#', '').split('?')[0];
+
+        viewname = viewname + 'View';
+        if (typeof (window[viewname]) != 'undefined') {
+            if (app.currentView != null && typeof (app.currentView['unload']) != 'undefined') {
+                app.currentView.unload(function () {
+                    main.html(new window[viewname]().render());
+                });
+            }
+            else {
+                main.html(new window[viewname]().render());
+            }
+        }
     },
 
     loadSongs: function(lan) {
@@ -68,11 +92,9 @@
         init: function () {
             var menu = $('#languagemenu');
             $.ajax({
-                url: 'http://localhost:53217/api/Language', accept: "application/json;charset=utf-8", success: function (res) {
-                    console.log(res);
+                url: app.baseUrl+ '/api/Language', accept: "application/json;charset=utf-8", success: function (res) {
                     menu.html(app.languageMenu(res));
                     $.each(app.language.get(), function (i, o) {
-                        console.log(o);
                         $('#' + o).addClass('selected');
                     });
                                            
@@ -91,13 +113,9 @@
                         else
                         {
                             arr.push(this.id);
-                            console.log(arr);
                         }
                         localStorage.setItem("language", JSON.stringify(arr));
-                        $('#' + this.id, menu).toggleClass('selected');
-                        
-                        console.log(this.id);
-                        
+                        $('#' + this.id, menu).toggleClass('selected');                                                
                         app.loadSongs(app.language.get());
                     });
                 }
