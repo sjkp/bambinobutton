@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package dk.sjkp.balkanbutton;
+package dk.sjkp.bambinobutton;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;
