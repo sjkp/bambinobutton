@@ -22,20 +22,44 @@
     </script>
     <script type="text/x-handlebars-template" id="feedback-tmpl">
         <h1>Feedback</h1>
-       
+
         <p>
-        Help us by giving your feedback to expand the collection of songs, requesting new languages or just ideas for further development! 
+            Help us by giving your feedback to expand the collection of songs, requesting new languages or just ideas for further development! 
         We can’t thank you enough and remember that you’re awesome!
-            </p>
+        </p>
         <textarea id="feedbacktext" placeholder="Please send suggestions for improvements here." rows="7" />
         <br />
-        <button id="sendfeedback">Send</button> <span id="feedbackresponse"></span>
+        <button id="sendfeedback">Send</button>
+        <span id="feedbackresponse"></span>
     </script>
     <script type="text/x-handlebars-template" id="about-tmpl">
         <h1>About</h1>
-        <p>Bambino button gives children the possibility to listen to children songs from all over the world. Note that all content and copyrights belongs to the representative artists and record companies. We encourage you to buy it if you or your children likes it and appreciative the hardworking people behind this lovely music! We condemn any misuse of this product and it was not the intention of bambino button. Thank you in advance. With that being said, hope that Bambino button brings joy to your family.
-            </p>
+        <p>
+            Bambino button gives children the possibility to listen to children songs from all over the world. Note that all content and copyrights belongs to the representative artists and record companies. We encourage you to buy it if you or your children likes it and appreciative the hardworking people behind this lovely music! We condemn any misuse of this product and it was not the intention of bambino button. Thank you in advance. With that being said, hope that Bambino button brings joy to your family.
+        </p>
     </script>
+<script type="text/x-handlebars-template" id="index-tmpl">
+   
+      <img src="img/logo.png" width="320px" />
+            <div id="loading">
+                <h1>Loading ...</h1>
+            </div>
+
+            <div id="bambinobutton"></div>
+            <div id="label"></div>
+            <div>
+                <input id="animation" type="checkbox" checked="checked" /><label for="animation">animation</label>
+                <input id="continuesplay" type="checkbox" /><label for="continuesplay">continuously play</label>
+            </div>         
+                  
+</script>
+<script type="text/x-handlebars-template" id="buy-tmpl">
+    <h1>Buy Fullaccess</h1>
+    <p>
+        {{text}}
+    </p>
+    <button id="buyfullaccess" {{disabled}}>{{buttontext}}</button>
+</script>
 </head>
 <body>
     <input type="checkbox" name="handler-right" class="handler" id="handler-right" onclick="null" />
@@ -46,7 +70,7 @@
     </div>
     <div id="settings">
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Feedback">Feedback</a></li>
             <li><a href="#Buy">Buy</a></li>
@@ -54,28 +78,22 @@
     </div>
 
   
-     
+    <audio id="player" autoplay="autoplay"></audio>
     <div id="wrapper">
         
            <p id="button">
-                <label for="handler-right" id="right" href="#">Settings</label>
-                <label for="handler-left" id="left" href="#">Language</label>
+                <span id="right">Settings</span>
+                <span id="left">Language</span>
             </p>
 
         <div id="page-1" class="center">
-            <img src="img/logo.png" width="320px" />
-            <div id="loading">
-                <h1>Loading ...</h1>
-            </div>
-
-            <div id="bambinobutton"></div>
-            <div id="label"></div>
-            <div>
-                <input id="animation" type="checkbox" checked="checked" /><label for="animation">animation</label>
-                <input id="continuesplay" type="checkbox" /><label for="continuesplay">continuously play</label>
-            </div>
-            <audio id="player" autoplay="autoplay"></audio>
-            <script type="text/javascript"><!--
+                       
+        </div>
+          <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>   
+    </div>
+       <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8603452501774153";
     /* balkanbutton */
     google_ad_slot = "9499594862";
@@ -83,23 +101,18 @@
     google_ad_height = 50;
     //-->
             </script>
-            <script type="text/javascript"
-                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>                        
-        </div>
-        
-    </div>
-       
 
 </body>
 <script src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8" src="inappbilling.js"></script>
 <script src="lib/modernizr.js"></script>
 <script src="Scripts/jquery-2.0.0.min.js"></script>
 <script src="Scripts/handlebars.min.js"></script>
 <script src="https://bambinobutton.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js"></script>
-
+<script src="js/views/index.js"></script>
 <script src="js/views/feedback.js"></script>
 <script src="js/views/about.js"></script>
+<script src="js/views/buy.js"></script>
 <script src="js/app.js"></script>    
 
 </html>

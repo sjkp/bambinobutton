@@ -60,44 +60,44 @@ li {
 #settings {
     left: auto;
     right: 0;  
-    display:none;  
+    /*display:none;*/  
 }
 
 .handler {
     display: none;
-    
+
     &#handler-right:checked {
-        
-        & ~ #settings {
-            display:block;
+
+        & ~ #settings {        
             -webkit-transition: opacity 0s 0s;
-            -moz-transition: opacity 0s 0s;            
+            -moz-transition: opacity 0s 0s;
         }
-        
+
         & ~ #wrapper {
             -webkit-transform: translate3D(-@menuOffset,0,0);
             -moz-transform: translate3D(-@menuOffset,0,0);
             -ms-transform: translate3D(-@menuOffset,0,0);
             -transform: translate3D(-@menuOffset,0,0);
-    
+
             #content {
                 overflow: hidden;
             }
         }
     }
-    
+
     &#handler-left:checked {
-    
+        
         & ~ #menu {
             -webkit-transition: opacity 0s 0s;
             -moz-transition: opacity 0s 0s;
         }
-   
+
         & ~ #wrapper {
             -webkit-transform: translate3D(@menuOffset,0,0);
             -moz-transform: translate3D(@menuOffset,0,0);
             -ms-transform: translate3D(@menuOffset,0,0);
             -transform: translate3D(@menuOffset,0,0);
+
             #content {
                 overflow: hidden;
             }
@@ -122,7 +122,7 @@ li {
         background: #eee;
         line-height: 20px;
     
-        label {
+        span {
             color: #666;
             text-transform: uppercase;
             text-decoration: none;

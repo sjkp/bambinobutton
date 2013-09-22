@@ -36,8 +36,13 @@ h1
 
 .center
 {
+   
+    height:100%;
+}
+.center > div
+{
     margin: 0 auto;
-    width: 320px;
+    width: 320px;    
 }
 
 .ani {

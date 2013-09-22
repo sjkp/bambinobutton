@@ -51,13 +51,12 @@ li a.active {
 #settings {
   left: auto;
   right: 0;
-  display: none;
+  /*display:none;*/
 }
 .handler {
   display: none;
 }
 .handler#handler-right:checked ~ #settings {
-  display: block;
   -webkit-transition: opacity 0s 0s;
   -moz-transition: opacity 0s 0s;
 }
@@ -100,16 +99,16 @@ li a.active {
   background: #eee;
   line-height: 20px;
 }
-#wrapper #button label {
+#wrapper #button span {
   color: #666;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
 }
-#wrapper #button label:hover {
+#wrapper #button span:hover {
   color: #336c95;
 }
-#wrapper #button label#right {
+#wrapper #button span#right {
   float: right;
 }
 #wrapper #content {

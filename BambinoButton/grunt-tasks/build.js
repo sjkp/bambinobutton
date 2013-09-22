@@ -42,8 +42,7 @@ module.exports = function (grunt) {
     // Based on jQuery UI build.js
     grunt.registerTask("clean", function () {
         //rimraf.sync("dist"); //minified files.
-        rimraf.sync("targets/android2/assets/www");
-        rimraf.sync("targets/ios/www");
+        rimraf.sync("phonegap/bambinobutton/www");
     });
 
 };

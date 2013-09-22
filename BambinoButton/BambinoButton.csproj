@@ -110,8 +110,9 @@
     <Content Include="index.html" />
     <Content Include="js\app.js" />
     <Content Include="js\views\about.js" />
+    <Content Include="js\views\buy.js" />
     <Content Include="js\views\feedback.js" />
-    <Content Include="lib\cordova\cordova-2.5.0-android.js" />
+    <Content Include="js\views\index.js" />
     <Content Include="lib\modernizr.js" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
@@ -240,4 +241,7 @@
     <Copy SourceFiles="connectionStrings.template.config" DestinationFiles="connectionStrings.config" SkipUnchangedFiles="true" Condition="!Exists('connectionStrings.config')">
     </Copy>
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>grunt</PostBuildEvent>
+  </PropertyGroup>
 </Project>

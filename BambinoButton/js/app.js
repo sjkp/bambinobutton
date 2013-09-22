@@ -9,30 +9,46 @@
     continuesPlay: false,
     initialize: function () {
      
-        
+        $('#right').click(function () {
+            $('#handler-right').prop('checked', !$('#handler-right').prop('checked'));
+        });
+        $('#left').click(function () {
+            var that = $('#handler-left');
+            that.prop('checked', !that.prop('checked'));
+            if (that.is(":checked")) {
+                $('#settings').hide();
+            }
+            else {
+                setTimeout(function () {
+                    $('#settings').show();
+                }, 500);
+            }
+        });
+        $('#settings a').click(function () {
+            $('.handler').prop('checked', false);
+        });
+
         app.client = new WindowsAzure.MobileServiceClient("https://bambinobutton.azure-mobile.net/", "CYLhHjCyzQDkWKvtPhKdqPLUbYWJxl68");
         app.loadSongs(app.language.get());
 
-        $('#animation').click(function () {
-            var that = $(that);
-            if (this.checked)
-            {
-                app.animation = true;
-                $('#wrapper').addClass('ani');
-            }
-            else
-            {
-                app.animation = false;
-                $('#wrapper').removeClass('ani');
-            }
-        });
+        
         $(window).on('hashchange', $.proxy(this.route, this));
         app.route();
         app.language.init();
-        $('#settings a').click(function () {
-            $('.handler').prop('checked', false);
-        })
+        
+
+        $('#handler-left').change(function () {
+                
+        });
         //$(window).on('resize', app.onWindowResize);
+        if (typeof (inappbilling) != 'undefined') {
+            inappbilling.init(function (success) {
+                alert(JSON.stringify(success));
+            },
+                function (error) {
+                    alert(JSON.stringify(error));
+                });
+        }
     },
 
     route: function()
@@ -40,18 +56,27 @@
         var hash = window.location.hash
            , main = $('#page-1')
            , viewname = hash.replace('#', '').split('?')[0];
-
+        if (viewname == '')
+        {
+            viewname = "Index";
+        }
         viewname = viewname + 'View';
         if (typeof (window[viewname]) != 'undefined') {
             if (app.currentView != null && typeof (app.currentView['unload']) != 'undefined') {
                 app.currentView.unload(function () {
-                    main.html(new window[viewname]().render());
+                    app.currentView = new window[viewname]();
+                    main.html(app.currentView.render());
                 });
             }
             else {
-                main.html(new window[viewname]().render());
+                app.currentView = new window[viewname]();
+                main.html(app.currentView.render());
             }
-        }
+            if (app.currentView != null && typeof (app.currentView['afterload']) != 'undefined')
+            {
+                app.currentView.afterload();
+            }
+        }       
     },
 
     loadSongs: function(lan) {
@@ -59,21 +84,8 @@
             return this.language in arr;
         },lan).read().done(function (result) {
             app.songs = result;
-            var ios = false;
-            var p = navigator.platform;
-            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
-
-                $('#bambinobutton').on('touchstart', app.onPlayClick);
-                $('#bambinobutton').on('touchend', app.onPlayRelease);
-            }
-            else {
-
-                $('#bambinobutton').mousedown(app.onPlayClick);
-                $('#bambinobutton').mouseup(app.onPlayRelease);
-            }
             $('#loading').hide();
             $('#bambinobutton').show();
-            $('#continuesplay').on('click', app.onContinuesPlayClick);
             //app.onWindowResize();
 
         });
@@ -177,7 +189,7 @@
 
     playAudio: function(url)
     {
-        $('body').removeClass('ani');
+        $('#page-1').removeClass('ani');
         if (app.audio != null)
         {
             if (typeof(app.audio["stop"]) === 'function')
@@ -272,7 +284,7 @@
         var i = app.nowPlaying;
         $('#label').html(app.songs[i].title);
         if (app.animation) {
-            $('body').addClass('ani');
+            $('#page-1').addClass('ani');
         }
     },
 
