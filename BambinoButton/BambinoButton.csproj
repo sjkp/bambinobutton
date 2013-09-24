@@ -242,6 +242,6 @@
     </Copy>
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>grunt</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Debug grunt</PostBuildEvent>
   </PropertyGroup>
 </Project>
