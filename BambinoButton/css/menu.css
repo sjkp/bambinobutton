@@ -18,7 +18,7 @@ body {
   background: #333;
   overflow: auto;
 }
-ul {
+ul.menu {
   display: block;
   height: 100%;
   overflow-y: scroll;
@@ -27,7 +27,7 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-li {
+ul.menu > li {
   cursor: pointer;
 }
 li.selected {
@@ -52,6 +52,29 @@ li a.active {
   left: auto;
   right: 0;
   /*display:none;*/
+}
+#wrapper.left {
+  -webkit-transform: translate3D(80%, 0, 0);
+  -moz-transform: translate3D(80%, 0, 0);
+  -ms-transform: translate3D(80%, 0, 0);
+  -transform: translate3D(80%, 0, 0);
+}
+#wrapper.right {
+  -webkit-transform: translate3D(-80%, 0, 0);
+  -moz-transform: translate3D(-80%, 0, 0);
+  -ms-transform: translate3D(-80%, 0, 0);
+  -transform: translate3D(-80%, 0, 0);
+}
+#content.menuopen {
+  overflow: hidden;
+}
+#settings.menuopen {
+  -webkit-transition: opacity 0s 0s;
+  -moz-transition: opacity 0s 0s;
+}
+#menu.menuopen {
+  -webkit-transition: opacity 0s 0s;
+  -moz-transition: opacity 0s 0s;
 }
 .handler {
   display: none;

@@ -14,7 +14,10 @@
   <feature name="Media">
     <param name="android-package" value="org.apache.cordova.AudioHandler" />
   </feature>
-    <preference name="permissions" value="none" />
+  <feature name="InAppBillingPlugin">
+    <param name="android-package" value="com.smartmobilesoftware.inappbilling.InAppBillingPlugin"/>
+  </feature>
+  <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />

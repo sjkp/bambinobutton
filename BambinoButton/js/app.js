@@ -4,34 +4,46 @@
     client: null,
     songs: null,
     audio: null,
+    products: [],
     nowPlaying: null,
-    animation: true,
-    continuesPlay: false,
+    animation: false,
+    continuesPlay: true,
     initialize: function () {
      
         $('#right').click(function () {
-            $('#handler-right').prop('checked', !$('#handler-right').prop('checked'));
+            //$('#handler-right').prop('checked', !$('#handler-right').prop('checked'));
+            $('#wrapper').toggleClass('right');
+            $('#content').toggleClass('menuopen');
+            $('#settings').toggleClass('menuopen');
         });
         $('#left').click(function () {
-            var that = $('#handler-left');
-            that.prop('checked', !that.prop('checked'));
-            if (that.is(":checked")) {
-                $('#settings').hide();
-            }
-            else {
+            //var that = $('#handler-left');
+            //that.prop('checked', !that.prop('checked'));
+            if ($('#menu').hasClass('menuopen')) {
+                
                 setTimeout(function () {
                     $('#settings').show();
                 }, 500);
             }
+            else {
+                $('#settings').hide();
+            }
+            $('#wrapper').toggleClass('left');
+            $('#content').toggleClass('menuopen');
+            $('#menu').toggleClass('menuopen');
+            
         });
         $('#settings a').click(function () {
-            $('.handler').prop('checked', false);
+            $('#wrapper').toggleClass('right');
+            $('#content').toggleClass('menuopen');
+            $('#settings').toggleClass('menuopen');
         });
 
-        app.client = new WindowsAzure.MobileServiceClient("https://bambinobutton.azure-mobile.net/", "CYLhHjCyzQDkWKvtPhKdqPLUbYWJxl68");
-        app.loadSongs(app.language.get());
-
-        
+        app.client = new WindowsAzure.MobileServiceClient("https://bambinobutton.azure-mobile.net/", "CYLhHjCyzQDkWKvtPhKdqPLUbYWJxl68").withFilter(function (request, next, callback) {
+            request.headers.ProductKeys = JSON.stringify(app.products);
+            next(request, callback);
+        });
+                
         $(window).on('hashchange', $.proxy(this.route, this));
         app.route();
         app.language.init();
@@ -43,11 +55,22 @@
         //$(window).on('resize', app.onWindowResize);
         if (typeof (inappbilling) != 'undefined') {
             inappbilling.init(function (success) {
-                alert(JSON.stringify(success));
-            },
-                function (error) {
-                    alert(JSON.stringify(error));
+                inappbilling.getPurchases(function (products) {
+                    app.products = products;
+                    app.loadSongs(app.language.get());
+                }, function (err) {
+                    alert('purchases' + JSON.stringify(err));
+                    app.loadSongs(app.language.get());
                 });
+                },
+                function (error) {
+                    alert('inappbilling error' + JSON.stringify(error));
+                    app.loadSongs(app.language.get());
+                });
+        }
+        else
+        {
+            app.loadSongs(app.language.get());
         }
     },
 
@@ -80,10 +103,8 @@
     },
 
     loadSongs: function(lan) {
-        app.client.getTable('song').where(function (arr) {
-            return this.language in arr;
-        },lan).read().done(function (result) {
-            app.songs = result;
+        app.client.invokeApi('song', { method: 'POST', body: lan }).done(function (res) {
+            app.songs = JSON.parse(res.response);
             $('#loading').hide();
             $('#bambinobutton').show();
             //app.onWindowResize();
@@ -321,7 +342,19 @@
 };
 
 app.languageMenu = Handlebars.compile($("#language-menu-tpl").html());
-app.initialize();
+
+
+if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+    document.addEventListener('deviceready', function () {
+        console.log('initialize in device ready');
+        app.initialize();
+    });
+} else {
+    app.initialize(); //this is the browser
+}
+
+
+
 
 
 /* youtube player */
