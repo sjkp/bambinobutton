@@ -43,7 +43,7 @@
             }));
         }
         return this.el.html(BuyView.template({
-            text: 'Open up for plenty more songs for the little ones plus additional features and options. One dollar you will get you:<ul><li>50+ songs and more to come<li>Possibility for fast feedback</li><li>Continuing development and more languages</li><li>A good warm feeling and plus point in karma.</li><li>Least but not last, are you supporting us and thanks for that! We appreciate it and a grateful for it.</li></ul>',
+            text: 'In return for a small donation, you will get access to the full version with plenty more songs for you and your children (approx 50 songs per language and more to come). Please feel free to give us feedback. <br>For about 1 dollar or 0,75 euro you will get:<ul><li>50+ songs and more to come for each language<li>Possibility for fast feedback</li><li>Continuing development and more languages</li><li>A good warm feeling and plus point in karma</li><li>Least but not last: You are supporting us by this donation and thanks for that! We appreciate it and a grateful for it</li></ul>',
             buttontext: 'Get it now',
             disabled: ''
         }));

@@ -97,22 +97,30 @@
     <Content Include="css\menu.min.css">
       <DependentUpon>menu.less</DependentUpon>
     </Content>
+    <Content Include="css\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="css\style.min.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
+    <Content Include="img\button_green.png" />
+    <Content Include="img\glasstop.png" />
     <Content Include="index_mobile.html" />
-    <Content Include="css\styles.css" />
     <Content Include="grunt-tasks\build.js" />
     <Content Include="gruntfile.js" />
     <Content Include="img\applestore.png" />
     <Content Include="img\button.png" />
     <Content Include="img\cordova.png" />
     <Content Include="img\logo.png" />
-    <Content Include="img\promographics.png" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
     <Content Include="js\views\about.js" />
     <Content Include="js\views\buy.js" />
     <Content Include="js\views\feedback.js" />
     <Content Include="js\views\index.js" />
+    <Content Include="lib\jquery.touchSwipe.js" />
+    <Content Include="lib\jquery.touchSwipe.min.js" />
     <Content Include="lib\modernizr.js" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
@@ -140,6 +148,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="connectionStrings.template.config" />
+    <Content Include="css\style.less" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <Content Include="res\icon\android\icon-36-ldpi.png" />
     <Content Include="res\icon\android\icon-48-mdpi.png" />

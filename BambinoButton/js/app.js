@@ -10,34 +10,7 @@
     continuesPlay: true,
     initialize: function () {
      
-        $('#right').click(function () {
-            //$('#handler-right').prop('checked', !$('#handler-right').prop('checked'));
-            $('#wrapper').toggleClass('right');
-            $('#content').toggleClass('menuopen');
-            $('#settings').toggleClass('menuopen');
-        });
-        $('#left').click(function () {
-            //var that = $('#handler-left');
-            //that.prop('checked', !that.prop('checked'));
-            if ($('#menu').hasClass('menuopen')) {
-                
-                setTimeout(function () {
-                    $('#settings').show();
-                }, 500);
-            }
-            else {
-                $('#settings').hide();
-            }
-            $('#wrapper').toggleClass('left');
-            $('#content').toggleClass('menuopen');
-            $('#menu').toggleClass('menuopen');
-            
-        });
-        $('#settings a').click(function () {
-            $('#wrapper').toggleClass('right');
-            $('#content').toggleClass('menuopen');
-            $('#settings').toggleClass('menuopen');
-        });
+        app.initMenu();
 
         app.client = new WindowsAzure.MobileServiceClient("https://bambinobutton.azure-mobile.net/", "CYLhHjCyzQDkWKvtPhKdqPLUbYWJxl68").withFilter(function (request, next, callback) {
             request.headers.ProductKeys = JSON.stringify(app.products);
@@ -72,6 +45,66 @@
         {
             app.loadSongs(app.language.get());
         }
+    },
+
+    initMenu: function()
+    {
+        $('#right').click(function () {
+            //$('#handler-right').prop('checked', !$('#handler-right').prop('checked'));
+            $('#wrapper').toggleClass('right');
+            $('#content').toggleClass('menuopen');
+            $('#settings').toggleClass('menuopen');
+        });
+        $('#left').click(function () {
+            //var that = $('#handler-left');
+            //that.prop('checked', !that.prop('checked'));
+            if ($('#menu').hasClass('menuopen')) {
+                
+                setTimeout(function () {
+                    $('#settings').show();
+                }, 500);
+            }
+            else {
+                $('#settings').hide();
+            }
+            $('#wrapper').toggleClass('left');
+            $('#content').toggleClass('menuopen');
+            $('#menu').toggleClass('menuopen');
+            
+        });
+        $('#settings a').click(function () {
+            $('#wrapper').toggleClass('right');
+            $('#content').toggleClass('menuopen');
+            $('#settings').toggleClass('menuopen');
+        });
+        $(document).ready(function () {
+            $('#settings').swipe({
+                swipeRight: function (event, direction, distance, duration, fingerCount) {
+                    
+                    $('#wrapper').toggleClass('right');
+                    $('#content').toggleClass('menuopen');
+                    $('#settings').toggleClass('menuopen');
+                },
+                threshold: 25
+            });
+            $('#menu').swipe({
+                swipeLeft: function (event, direction, distance, duration, fingerCount) {
+                    if ($('#menu').hasClass('menuopen')) {
+
+                        setTimeout(function () {
+                            $('#settings').show();
+                        }, 500);
+                    }
+                    else {
+                        $('#settings').hide();
+                    }
+                    $('#wrapper').toggleClass('left');
+                    $('#content').toggleClass('menuopen');
+                    $('#menu').toggleClass('menuopen');
+                },
+                threshold: 25
+            });
+        });
     },
 
     route: function()
@@ -129,26 +162,54 @@
                     menu.html(app.languageMenu(res));
                     $.each(app.language.get(), function (i, o) {
                         $('#' + o).addClass('selected');
+                        $('#' + o + ' input').prop('checked', true);
                     });
                                            
                     $('li', menu).click(function () {
-                        var arr = app.language.get();
-                        if ($('#'+this.id, menu).hasClass('selected'))
-                        {                            
-                            for (var i = arr.length - 1; i >= 0; i--)
+                        if (this.id == 'allsongs')
+                        {
+                            if ($('#' + this.id + ' input').prop('checked') == true)
                             {
-                                if (arr[i] === this.id)
-                                {
-                                    arr.splice(i, 1);
-                                }
-                            }                         
+                                //deselect all
+                                $('li', menu).each(function (i, o) {
+                                    var that = $(o);
+                                    that.removeClass('selected');
+                                    $('input', that).prop('checked', false);
+                                    
+                                });
+                                localStorage.setItem("language", JSON.stringify([]));
+                            }
+                            else
+                            {
+                                //select all 
+                                var arr = [];
+                                $('li', menu).each(function (i, o) {
+                                    var that = $(o);
+                                    that.addClass('selected');
+                                    $('input', that).prop('checked', true);
+                                    arr.push(o.id);
+                                });
+                                localStorage.setItem("language", JSON.stringify(arr));
+                            }
                         }
                         else
                         {
-                            arr.push(this.id);
+                            var arr = app.language.get();
+                            if ($('#' + this.id, menu).hasClass('selected')) {
+                                for (var i = arr.length - 1; i >= 0; i--) {
+                                    if (arr[i] === this.id) {
+                                        arr.splice(i, 1);
+                                    }
+                                }
+                            }
+                            else {
+                                arr.push(this.id);
+                            }
+                            localStorage.setItem("language", JSON.stringify(arr));
+                            $('#' + this.id, menu).toggleClass('selected');
+                            $('#' + this.id + ' input').prop('checked', !$('#' + this.id + ' input').prop('checked'));
                         }
-                        localStorage.setItem("language", JSON.stringify(arr));
-                        $('#' + this.id, menu).toggleClass('selected');                                                
+
                         app.loadSongs(app.language.get());
                     });
                 }
@@ -193,8 +254,8 @@
     {
         var that = $(this);
        // event.preventDefault();
-        that.css('background-position', '-320px, 0px');
-        that.css('margin-top', '50px');
+        that.css('background-position', '-300px, 0px');
+        that.css('margin-top', '48px');
         that.css('margin-bottom', '0px');
 
         var i = Math.floor((Math.random() * app.songs.length));

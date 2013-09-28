@@ -1,6 +1,6 @@
 ﻿var IndexView = function () {
     this.init = function () {
-        this.el = $('<div/>');
+        this.el = $('<div class="textcenter" />');
         var p = navigator.platform;
         if ('ontouchstart' in window) {
 
