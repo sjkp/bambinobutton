@@ -100,6 +100,7 @@
     <Content Include="css\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
+    <Content Include="css\style.less" />
     <Content Include="css\style.min.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
@@ -148,7 +149,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="connectionStrings.template.config" />
-    <Content Include="css\style.less" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <Content Include="res\icon\android\icon-36-ldpi.png" />
     <Content Include="res\icon\android\icon-48-mdpi.png" />

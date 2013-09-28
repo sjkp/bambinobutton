@@ -1,0 +1,134 @@
+﻿@maincolor: #65dfa4;
+@secondcolor: #45e0f3;
+@thirdcolor: #ffc0cb;
+@fourthcolor: #fff568;
+
+
+body {
+    background: white;   
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    margin:0;
+}
+p {
+    margin:0;
+}
+
+#bambinobutton {
+    width: 300px;
+    height: 208px;
+    margin: 38px auto;
+    background: url(../img/button_green.png) no-repeat;
+    display:none;
+}
+
+#disclaimer {
+    color:lightgray;
+}
+
+h1 
+{
+    color: @maincolor;
+    font-weight: bolder;    
+    -webkit-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top:0px;
+}
+
+#ytplayer 
+{
+    position:absolute;
+    left:-9000px;
+}
+
+.textcenter {
+    text-align:center;
+}
+
+.center
+{
+   
+    height:100%;
+}
+.center > div
+{
+    margin: 0 auto;
+    width: 320px;    
+}
+
+.ani {
+     -moz-animation: cAni 5.0s linear infinite;
+    -o-animation: cAni 5.0s linear infinite;
+    -webkit-animation: cAni 5.0s linear infinite;
+    animation: cAni 5.0s linear infinite;
+}
+
+@-moz-keyframes cAni{
+    20% {background-color:@maincolor;}
+    40% {background-color:@secondcolor;}
+    60% {background-color:@thirdcolor;}
+    80% {background-color:@fourthcolor;}
+    100% {background-color:white;}
+}
+
+@-webkit-keyframes cAni{
+    20% {background-color:@maincolor;}
+    40% {background-color:@secondcolor;}
+    60% {background-color:@thirdcolor;}
+    80% {background-color:@fourthcolor;}
+    100% {background-color:white;}
+}
+
+@keyframes cAni{
+    20% {background-color:@maincolor;}
+    40% {background-color:@secondcolor;}
+    60% {background-color:@thirdcolor;}
+    80% {background-color:@fourthcolor;}
+    100% {background-color:white;}
+}
+
+
+#label {
+    color: @maincolor;
+    font-size: xx-large;
+    font-weight: bolder;    
+    -webkit-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+ .round {
+  display: block;
+  background-color: @maincolor;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@maincolor), to(@maincolor));
+  background-image: -webkit-linear-gradient(top, @maincolor, @maincolor); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: white;
+  margin: 36px;
+  width: 144px;
+  height: 144px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px @maincolor, inset 0px 2px 3px @maincolor;
+}
+ .round:hover{
+  text-decoration: none;
+  color: white;
+  background: @maincolor;
+}
+
+ @media screen and (max-width: 1024px) 
+ {
+     .appstores
+     {
+         display:none;
+     }
+ }
+
+textarea {
+    width:300px;
+}
+
+
