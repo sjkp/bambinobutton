@@ -157,24 +157,24 @@
 
         init: function () {
             var menu = $('#languagemenu');
-            $.ajax({
-                url: app.baseUrl+ '/api/Language', accept: "application/json;charset=utf-8", success: function (res) {
+            //$.ajax({
+            //    url: app.baseUrl + '/api/Language', accept: "application/json;charset=utf-8", success:
+            app.client.getTable('languages').orderBy("languagelocal").read().done(function (res) {
+            
                     menu.html(app.languageMenu(res));
                     $.each(app.language.get(), function (i, o) {
-                        $('#' + o).addClass('selected');
-                        $('#' + o + ' input').prop('checked', true);
+                        $('#' + o).addClass('selected');                       
                     });
                                            
                     $('li', menu).click(function () {
                         if (this.id == 'allsongs')
                         {
-                            if ($('#' + this.id + ' input').prop('checked') == true)
+                            if ($('#' + this.id).hasClass('selected') == true)
                             {
                                 //deselect all
                                 $('li', menu).each(function (i, o) {
                                     var that = $(o);
                                     that.removeClass('selected');
-                                    $('input', that).prop('checked', false);
                                     
                                 });
                                 localStorage.setItem("language", JSON.stringify([]));
@@ -186,8 +186,9 @@
                                 $('li', menu).each(function (i, o) {
                                     var that = $(o);
                                     that.addClass('selected');
-                                    $('input', that).prop('checked', true);
-                                    arr.push(o.id);
+                                    if (o.id != 'allsongs') {
+                                        arr.push(o.id);
+                                    }
                                 });
                                 localStorage.setItem("language", JSON.stringify(arr));
                             }
@@ -207,13 +208,12 @@
                             }
                             localStorage.setItem("language", JSON.stringify(arr));
                             $('#' + this.id, menu).toggleClass('selected');
-                            $('#' + this.id + ' input').prop('checked', !$('#' + this.id + ' input').prop('checked'));
                         }
 
                         app.loadSongs(app.language.get());
                     });
                 }
-            });
+            );
         },
 
        

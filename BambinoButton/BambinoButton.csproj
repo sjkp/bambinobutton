@@ -105,6 +105,8 @@
       <DependentUpon>style.less</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="img\buttonclicked.png" />
+    <Content Include="img\buttonunclicked.png" />
     <Content Include="img\button_green.png" />
     <Content Include="img\glasstop.png" />
     <Content Include="index_mobile.html" />

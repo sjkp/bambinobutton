@@ -17,9 +17,9 @@
             ga('send', 'pageview');
 </script>
     <script type="text/x-handlebars-template" id="language-menu-tpl">    
-        <li id="allsongs"><a><input type="radio" />World</a></li>
+        <li id="allsongs"><a><div class="img"/><span>All languages (World)</span></a></li>
         {{#.}}
-        <li id="{{LCID}}"><a><input type="radio" />{{Name}}</a></li>
+        <li id="{{lcid}}"><a><div class="img"/><span>{{languagelocal}} - {{language}} ({{country}})</span></a></li>
         {{/.}}
     </script>
     <script type="text/x-handlebars-template" id="feedback-tmpl">

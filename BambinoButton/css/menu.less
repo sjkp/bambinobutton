@@ -18,7 +18,7 @@ html , body {
     bottom: 0;
     width: @menuOffset;
     z-index: 1;
-    background: #dfdfdf;
+    background: #c0c0c0;
     overflow: auto;   
     & input {
         margin-right:10px;
@@ -39,21 +39,35 @@ ul.menu > li {
     cursor: pointer;
 }
  li.selected {
-     background:#fff;
+     background:#d2d2d2;
       
  }
+  li.selected div.img 
+  {     
+     background-image: url('/img/buttonclicked.png');
+  }
+
+  li div.img 
+  {
+      width:28px;
+      height:25px;
+      display:inline-block;
+      margin-right:5px;
+      vertical-align:middle;
+      background-image: url('/img/buttonunclicked.png');
+  }
 
  li a {
             display: block;
             padding: 10px;
-            border-bottom: 1px solid #c0c0c0;
-            color: #666;
-            text-shadow: 0 1px 0 #999;
+            border-bottom: 1px solid #d2d2d2;
+            color: #fff;
+            //text-shadow: 0 1px 0 #999;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
-            background: -webkit-linear-gradient(rgba(255,255,255,.02) 0%, rgba(0,0,0,.1) 100%);
-            background: -moz-linear-gradient(rgba(255,255,255,.02) 0%, rgba(0,0,0,.1) 100%);
+            //box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
+            //background: -webkit-linear-gradient(rgba(255,255,255,.02) 0%, rgba(0,0,0,.1) 100%);
+            //background: -moz-linear-gradient(rgba(255,255,255,.02) 0%, rgba(0,0,0,.1) 100%);
            
             &.active {
                 background-color: @blue;
