@@ -225,11 +225,13 @@
         if (this.checked)
         {
             app.continuesPlay = true;
-            setTimeout(app.onCurrentPosition, 1000);
+            clearInterval(app.interval);
+            app.interval = setInterval(app.onCurrentPosition, 1000);
         }
         else
         {
             app.continuesPlay = false;
+            clearInterval(app.interval);            
         }
     },
 
@@ -291,9 +293,8 @@
         {
             app.audio = new Media(url, app.onAudioSuccess, app.onAudioError, app.onAudioStatus);            
             app.audio.play();
-            if (app.continuesPlay) {               
-                setTimeout(app.onCurrentPosition, 1000);
-            }
+            clearInterval(app.interval);
+            
         }
         else
         {
@@ -303,6 +304,11 @@
                 //.onplaying(app.setPlayingLabel);
                 app.audio.play();
                 $(app.audio).on('playing', app.setPlayingLabel);
+                if (app.continuesPlay) {
+                    //setTimeout(app.onCurrentPosition, 1000);
+                    clearInterval(app.interval);
+                    app.interval = setInterval(app.onCurrentPosition, 1000);
+                }
             }
             else
             {
@@ -320,11 +326,12 @@
             if (typeof (app.audio['getCurrentPosition']) === 'function') {
                 app.audio.getCurrentPosition(function (position) {
                     
-                        if (position >= app.audio.getDuration() && app.continuesPlay || position == -1) {
+                    if ((position >= app.audio.getDuration() || position < 0) && app.continuesPlay) { //
                             var i = Math.floor((Math.random() * app.songs.length));
                             app.nowPlaying = i;
                             $('#label').html('Loading song');
-                            app.playAudio(app.songs[i].url);
+                            clearInterval(app.interval);
+                            app.playAudio(app.songs[i].url);                            
                         }
                     
                 });
@@ -339,10 +346,10 @@
             }
         }
         if (app.continuesPlay) {
-            /*app.audio.getCurrentPosition(function(position){
-                                         $('#label').html(new Date() + ' *' +position );
-                                         });*/
-            setTimeout(app.onCurrentPosition, 1000);
+            //app.audio.getCurrentPosition(function(position){
+            //                             $('#label').html(new Date() + ' *' +position );
+            //                             });
+            //setTimeout(app.onCurrentPosition, 1000);
         }
     },
 
@@ -357,6 +364,10 @@
         if (Media.MEDIA_RUNNING == mediaStatus)
         {
             app.setPlayingLabel();
+            if (app.continuesPlay) {
+
+                app.interval = setInterval(app.onCurrentPosition, 1000);
+            }
         }
         
     },

@@ -38,7 +38,7 @@ li.selected {
   background: #d2d2d2;
 }
 li.selected div.img {
-  background-image: url('/img/buttonclicked.png');
+  background-image: url(../img/buttonclicked.png);
 }
 li div.img {
   width: 28px;
@@ -46,7 +46,7 @@ li div.img {
   display: inline-block;
   margin-right: 5px;
   vertical-align: middle;
-  background-image: url('/img/buttonunclicked.png');
+  background-image: url(../img/buttonunclicked.png);
 }
 li a {
   display: block;
@@ -130,7 +130,7 @@ li a.active {
 #wrapper #button {
   height: 20px;
   padding: 10px;
-  background: url('/img/glasstop.png') no-repeat center center;
+  background: url('../img/glasstop.png') no-repeat center center;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;

@@ -26,14 +26,14 @@
     };
 
     this.render = function () {
-        //if (typeof (inappbilling) == 'undefined')
-        //{
-        //    return this.el.html(BuyView.template({
-        //        text: 'If you want access to all songs please buy the phone version.',
-        //        buttontext: 'Buy full access',
-        //        disabled: 'disabled'
-        //    }));
-        //}
+        if (typeof (inappbilling) == 'undefined')
+        {
+            return this.el.html(BuyView.template({
+                text: 'If you want access to all songs please buy the phone version.',
+                buttontext: 'Buy full access',
+                disabled: 'disabled'
+            }));
+        }
 
         if (app.products != null && app.products.length > 0) {
             return this.el.html(BuyView.template({

@@ -2,7 +2,8 @@
 <widget id="dk.sjkp.bambinobutton" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Bambino Button</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+      Bambino button lets both you and your children listen to children songs and nursery rhymes from all over the world. We have collected the most popular tunes throughout the nations and you can either choose a specific language or the whole package. There is no need to memorize the names of the songs. By one push on the bambino button, it will randomly play a song. Only your imagination sets the limits for when it’s time for bambino button. Maybe for good quality time at home or when a song is needed in a small waiting time.
+
     </description>
     <author email="mail@sjkp.dk" href="http://sjkp.dk">
         Simon JK Pedersen
@@ -12,7 +13,7 @@
     <param name="android-package" value="org.apache.cordova.Storage" />
   </feature>
   <feature name="Media">
-    <param name="android-package" value="org.apache.cordova.AudioHandler" />
+    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
   </feature>
   <feature name="InAppBillingPlugin">
     <param name="android-package" value="com.smartmobilesoftware.inappbilling.InAppBillingPlugin"/>
@@ -27,7 +28,7 @@
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
