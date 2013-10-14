@@ -32,6 +32,9 @@
             $('#loading', this.el).hide();
             $('#bambinobutton', this.el).show();
         }
+        if (typeof (inappbilling) == 'undefined') {
+            this.el.append(IndexView.appStoreTemplate());
+        }
     }
 
     this.render = function () {
@@ -42,3 +45,4 @@
 };
 
 IndexView.template = Handlebars.compile($('#index-tmpl').html());
+IndexView.appStoreTemplate = Handlebars.compile($('#appstore-tmpl').html());
