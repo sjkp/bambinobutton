@@ -1,11 +1,11 @@
 Bambino Button
 ============
-To build on IOS. 
-Install node.js
+<h3>To build on IOS.</h3>
+Install node.js<br>
 Install phonegap 
 
-Go to BambinoButton/Bambinobutton run:
-npm install 
+Go to BambinoButton/Bambinobutton run:<br>
+npm install
 
-Go to BambinoButton/Bambinobutton/phonegap/bambinobutton
+Go to BambinoButton/Bambinobutton/phonegap/bambinobutton<br>
 phonegap build ios 
