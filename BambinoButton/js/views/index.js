@@ -29,7 +29,7 @@
     this.afterload = function ()
     {
         app.loadSongs(app.language.get());
-        if (typeof (inappbilling) == 'undefined') {
+        if (!app.isMobile()) {
             this.el.append(IndexView.appStoreTemplate());
         }
     }
