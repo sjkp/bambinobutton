@@ -393,12 +393,17 @@
     {
         //console.log(error);
     },
+
+    isMobile: function ()
+    {
+        return navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/);
+    }
 };
 
 app.languageMenu = Handlebars.compile($("#language-menu-tpl").html());
 
 
-if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+if (app.isMobile()) {
     document.addEventListener('deviceready', function () {
         console.log('initialize in device ready');
         app.initialize();
