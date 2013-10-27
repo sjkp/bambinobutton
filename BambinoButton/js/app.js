@@ -135,14 +135,22 @@
         }       
     },
 
-    loadSongs: function(lan) {
-        app.client.invokeApi('song', { method: 'POST', body: lan }).done(function (res) {
-            app.songs = JSON.parse(res.response);
+    loadSongs: function (lan) {
+        if (lan.length == 0) {
+            $('#nolanguage').show();
             $('#loading').hide();
-            $('#bambinobutton').show();
-            //app.onWindowResize();
+            $('#bambinobutton').hide();
+        }
+        else {
+            app.client.invokeApi('song', { method: 'POST', body: lan }).done(function (res) {
+                app.songs = JSON.parse(res.response);
+                $('#loading').hide();
+                $('#nolanguage').hide();
+                $('#bambinobutton').show();
+                //app.onWindowResize();
 
-        });
+            });
+        }
     },
 
     language: {
@@ -150,7 +158,7 @@
         get: function () {
             var lan = JSON.parse(localStorage.getItem("language"));
             if (lan == null || lan.length === 0) {
-                lan = ["en-GB"];
+                lan = [];
             }
             return lan;
         },
@@ -385,32 +393,6 @@
     {
         //console.log(error);
     },
-
-    stopVideo: function () {
-        if (ytplayer) {
-            ytplayer.stopVideo();
-            
-        }
-    },
-
-    loadVideo: function (id) {        
-        if (ytplayer && app.isYoutubePlayerReady) {
-            ytplayer.loadVideoById(id);
-        }
-
-    },
-
-
-    viewportResizing: function () {
-        var obj = $('#ytplayer');
-    },
-
-    setupYoutube: function () {
-        var tag = document.createElement('script');
-        tag.src = "//www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    }
 };
 
 app.languageMenu = Handlebars.compile($("#language-menu-tpl").html());
@@ -423,53 +405,4 @@ if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/))
     });
 } else {
     app.initialize(); //this is the browser
-}
-
-
-
-
-
-/* youtube player */
-function onYouTubeIframeAPIReady() {
-    var height = 300;
-    var width = 300;
-    ytplayer = new YT.Player('ytplayer', {
-        height: height,
-        width: width,
-        wmode: 'transparent',
-        //videoId: videoID,
-        playerVars: { 'wmode': 'transparent' },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange,
-            'onError': onPlayerError
-        }
-    });
-}
-
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-    app.isYoutubePlayerReady = true;
-    //setInterval(updatePlayerInfo, 250);
-    //updatePlayerInfo();
-    //loadVideo(videoID); auto start playing
-}
-
-// This function is called when an error is thrown by the player
-function onPlayerError(errorCode) {
-    //console.log("An error occured of type:" + errorCode);
-}
-
-// This function is called when the player changes state
-function onPlayerStateChange(event) {
-    //var elm = $('#playerstate');
-    //elm.text('State: ' + event.data);
-    //if (ytplayer && (event.data == 0 || (event.data = ! "-1" && ytplayer.getCurrentTime() == ytplayer.getDuration()))) {
-    //    //end of video load next in queue
-    //    var id = $(getVideoQueue()[nextToPlayFromQueue]).data('ytid');
-    //    if (id != null) {
-    //        loadVideo(id);
-    //        nextToPlayFromQueue = nextToPlayFromQueue + 1;
-    //    }
-    //}
 }

@@ -28,10 +28,7 @@
 
     this.afterload = function ()
     {
-        if (app.songs != null) {
-            $('#loading', this.el).hide();
-            $('#bambinobutton', this.el).show();
-        }
+        app.loadSongs(app.language.get());
         if (typeof (inappbilling) == 'undefined') {
             this.el.append(IndexView.appStoreTemplate());
         }
