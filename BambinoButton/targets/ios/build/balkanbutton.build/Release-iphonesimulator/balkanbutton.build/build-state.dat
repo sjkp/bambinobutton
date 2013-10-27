@@ -1,624 +1,0 @@
-Tbalkanbutton
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Info.plist balkanbutton/balkanbutton-Info.plist
-cPhaseScriptExecution "Copy www directory" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Script-304B58A110DAC018002A0835.sh
-cCpResource balkanbutton/config.xml build/balkanbutton.app/config.xml
-cCpResource balkanbutton/Resources/icons/icon-72.png build/balkanbutton.app/icon-72.png
-cCpResource balkanbutton/Resources/icons/icon.png build/balkanbutton.app/icon.png
-cCpResource balkanbutton/Resources/icons/icon@2x.png build/balkanbutton.app/icon@2x.png
-cCpResource balkanbutton/Resources/Capture.bundle build/balkanbutton.app/Capture.bundle
-cCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/en.lproj/Localizable.strings balkanbutton/Resources/en.lproj/Localizable.strings
-cCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/es.lproj/Localizable.strings balkanbutton/Resources/es.lproj/Localizable.strings
-cCompileXIB /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xib
-cCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/de.lproj/Localizable.strings balkanbutton/Resources/de.lproj/Localizable.strings
-cCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/se.lproj/Localizable.strings balkanbutton/Resources/se.lproj/Localizable.strings
-cCpResource balkanbutton/Resources/splash/Default-Landscape@2x~ipad.png build/balkanbutton.app/Default-Landscape@2x~ipad.png
-cCpResource balkanbutton/Resources/splash/Default-Landscape~ipad.png build/balkanbutton.app/Default-Landscape~ipad.png
-cCpResource balkanbutton/Resources/splash/Default-Portrait@2x~ipad.png build/balkanbutton.app/Default-Portrait@2x~ipad.png
-cCpResource balkanbutton/Resources/splash/Default-Portrait~ipad.png build/balkanbutton.app/Default-Portrait~ipad.png
-cCpResource balkanbutton/Resources/splash/Default@2x~iphone.png build/balkanbutton.app/Default@2x~iphone.png
-cCpResource balkanbutton/Resources/splash/Default~iphone.png build/balkanbutton.app/Default~iphone.png
-cCpResource balkanbutton/Resources/splash/Default-568h@2x~iphone.png build/balkanbutton.app/Default-568h@2x~iphone.png
-cCpResource balkanbutton/Resources/icons/icon-72@2x.png build/balkanbutton.app/icon-72@2x.png
-cProcessPCH /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.pth balkanbutton/balkanbutton-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton normal i386
-cGenerateDSYMFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton
-cTouch /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
-c0000000050EDEAFB0000000000000110
-t1357769467
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-c0000000051A3B65900000000001EB540
-t1369683545
-s2012480
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
-c0000000051A3B65800000000000C1030
-t1369683544
-s790576
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
-c0000000051A3B6590000000000193640
-t1369683545
-s1652288
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-c0000000051A3B65900000000000226E0
-t1369683545
-s141024
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c0000000051A3B65900000000003D4DF0
-t1369683545
-s4017648
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
-c0000000051A3B65A0000000000215DB0
-t1369683546
-s2186672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c0000000051A3B65A0000000000228FE0
-t1369683546
-s2265056
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c0000000051A3B65B000000000009C590
-t1369683547
-s640400
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
-c0000000051A3B65C0000000000085620
-t1369683548
-s546336
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c0000000051A3B65E00000000003DDFA0
-t1369683550
-s4054944
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
-c0000000051A3B66100000000002DBA50
-t1369683553
-s2996816
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c0000000051A3B66200000000000BCC20
-t1369683554
-s773152
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c0000000051A3B66300000000001D5750
-t1369683555
-s1922896
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c0000000051A3B664000000000006CC50
-t1369683556
-s445520
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c0000000051A3B6660000000000AB6230
-t1369683558
-s11231792
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m
-c0000000051C0B84500000000000013DE
-t1371584581
-s5086
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m
-c0000000051C0B845000000000000126D
-t1371584581
-s4717
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xib
-c0000000051C0B8450000000000001759
-t1371584581
-s5977
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/Capture.bundle
-c0000000051C0B845000000000000030E
-t1371584581
-s782
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/de.lproj/Localizable.strings
-c0000000051C0B8450000000000000485
-t1371584581
-s1157
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/en.lproj/Localizable.strings
-c0000000051C0B8450000000000000470
-t1371584581
-s1136
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/es.lproj/Localizable.strings
-c0000000051C0B845000000000000047D
-t1371584581
-s1149
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon-72.png
-c0000000051C0B8450000000000001350
-t1371584581
-s4944
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon-72@2x.png
-c0000000051C0B8450000000000002DBA
-t1371584581
-s11706
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon.png
-c0000000051C0B8450000000000000F3E
-t1371584581
-s3902
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon@2x.png
-c0000000051C0B8450000000000001EBD
-t1371584581
-s7869
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/se.lproj/Localizable.strings
-c0000000051C0B8450000000000000471
-t1371584581
-s1137
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-568h@2x~iphone.png
-c0000000051C0B84500000000000085B1
-t1371584581
-s34225
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Landscape@2x~ipad.png
-c0000000051C0B8450000000000012DF4
-t1371584581
-s77300
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Landscape~ipad.png
-c0000000051C0B8450000000000008877
-t1371584581
-s34935
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Portrait@2x~ipad.png
-c0000000051C0B8450000000000012B02
-t1371584581
-s76546
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Portrait~ipad.png
-c0000000051C0B84500000000000085E6
-t1371584581
-s34278
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default@2x~iphone.png
-c0000000051C0B8450000000000007323
-t1371584581
-s29475
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default~iphone.png
-c0000000051C0B845000000000000289A
-t1371584581
-s10394
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/balkanbutton-Prefix.pch
-c0000000051C0B84500000000000003C9
-t1371584581
-s969
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/config.xml
-c0000000051C0B8450000000000000B6B
-t1371584581
-s2923
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m
-c0000000051C0B845000000000000045E
-t1371584581
-s1118
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Capture.bundle
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-568h@2x~iphone.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Landscape@2x~ipad.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Landscape~ipad.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Portrait@2x~ipad.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Portrait~ipad.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default@2x~iphone.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default~iphone.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Info.plist
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/MainViewController.nib
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/PkgInfo
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/config.xml
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/de.lproj/Localizable.strings
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/en.lproj/Localizable.strings
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/es.lproj/Localizable.strings
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon-72.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon-72@2x.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon@2x.png
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/se.lproj/Localizable.strings
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.o
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.o
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/balkanbutton.LinkFileList
-c0000000051C0C1C700000000000001EC
-t1371587015
-s492
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.o
-t2
-s0
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Script-304B58A110DAC018002A0835.sh
-c0000000051C0C1C7000000000000051A
-t1371587015
-s1306
-
-N/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/libCordova.a
-c0000000051C0C1C7000000000033B218
-t1371587015
-s3387928
-
-N/var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.pth
-t2
-s0
-
-Nbalkanbutton/balkanbutton-Info.plist
-c0000000051C0BFDF00000000000006FD
-t1371586527
-s1789
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies282bc247f970b741^6132cd47f970b741^---0#1#0#--18"Check dependencies36"C79F3360-9EF3-4310-B41C-30C0F4F9FEB8-
-
-CCompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s393279817.920874
-e393279818.010109
-r1
-xCompileC
-xbuild/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.o
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m:80:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]
-o    self.viewController.useSplashScreen = YES;
-o                        ^
-o/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include/Cordova/CDVViewController.h:46:47: note: 'useSplashScreen' declared here
-o@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");
-o                                              ^
-o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m5ad8eb49f970b741^bfba024af970b741^-716"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m:80:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]    self.viewController.useSplashScreen = YES;                        ^/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include/Cordova/CDVViewController.h:46:47: note: 'useSplashScreen' declared here@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");                                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@128"'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property.-393279818#18446744073709551615#0#1(2@31"'useSplashScreen' declared here-393279818#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@116"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^45#46#45#46#1826#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@112"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m0000000000000000^79#24#79#24#2697#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@112"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m0000000000000000^3860"CompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.o balkanbutton/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-generated-files.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-own-target-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-all-target-headers.hmap -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-project-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/usr/local/lib/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/UninstalledProducts/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources/i386 -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources -F/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -include /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch -MMD -MT dependencies -MF /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.dia -c /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/AppDelegate.m -o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/AppDelegate.o36"89F5B7D5-B66F-4C48-A21B-3299636C4512-
-
-CCompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s393279818.042248
-e393279818.124760
-r1
-xCompileC
-xbuild/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.o
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m00e20a4af970b741^1100204af970b741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m0000000000000000^3902"CompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.o balkanbutton/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-generated-files.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-own-target-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-all-target-headers.hmap -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-project-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/usr/local/lib/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/UninstalledProducts/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources/i386 -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources -F/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -include /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch -MMD -MT dependencies -MF /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.dia -c /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.m -o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/MainViewController.o36"3F0748CF-AE48-46C1-A025-83B6FEA239E7-
-
-CCompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s393279818.013464
-e393279818.039431
-r1
-xCompileC
-xbuild/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.o
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m9888034af970b741^c4260a4af970b741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m0000000000000000^3802"CompileC build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.o balkanbutton/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-generated-files.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-own-target-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-all-target-headers.hmap -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-project-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/usr/local/lib/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/UninstalledProducts/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources/i386 -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources -F/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -include /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch -MMD -MT dependencies -MF /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.dia -c /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/main.m -o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/main.o36"A2748107-19DA-44D1-8AEE-49F67DB5F801-
-
-CCompileXIB /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xib
-s393279816.097767
-e393279817.529136
-r1
-xCompileXIB
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xib
-o2013-06-18 22:23:36.865 Interface Builder Cocoa Touch Tool[3121:f07] CFPreferences: user home directory at file://localhost/Users/simped/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Compiling /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xibe3181948f970b741^e2e78749f970b741^-238"2013-06-18 22:23:36.865 Interface Builder Cocoa Touch Tool[3121:f07] CFPreferences: user home directory at file://localhost/Users/simped/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xib0000000000000000^992"CompileXIB balkanbutton/Classes/MainViewController.xib    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/MainViewController.nib /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"41E4FA0B-1569-4A6B-8BA7-FC612EEC5674-
-
-CCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/de.lproj/Localizable.strings balkanbutton/Resources/de.lproj/Localizable.strings
-s393279817.543099
-e393279817.548516
-r1
-xCopyStringsFile
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/de.lproj/Localizable.strings
-xbalkanbutton/Resources/de.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy balkanbutton/Resources/de.lproj/Localizable.strings651c8b49f970b741^b8748c49f970b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/de.lproj/Localizable.strings0000000000000000^638"CopyStringsFile build/balkanbutton.app/de.lproj/Localizable.strings balkanbutton/Resources/de.lproj/Localizable.strings    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/de.lproj -- balkanbutton/Resources/de.lproj/Localizable.strings36"9A213BD3-0CE8-408F-BA32-CC34526423BF-
-
-CCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/en.lproj/Localizable.strings balkanbutton/Resources/en.lproj/Localizable.strings
-s393279816.079158
-e393279816.090592
-r1
-xCopyStringsFile
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/en.lproj/Localizable.strings
-xbalkanbutton/Resources/en.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy balkanbutton/Resources/en.lproj/Localizable.strings575c1448f970b741^9a3e1748f970b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/en.lproj/Localizable.strings0000000000000000^638"CopyStringsFile build/balkanbutton.app/en.lproj/Localizable.strings balkanbutton/Resources/en.lproj/Localizable.strings    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/en.lproj -- balkanbutton/Resources/en.lproj/Localizable.strings36"2E5B6232-1E36-417E-9F88-18C98741F233-
-
-CCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/es.lproj/Localizable.strings balkanbutton/Resources/es.lproj/Localizable.strings
-s393279816.092121
-e393279816.096239
-r1
-xCopyStringsFile
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/es.lproj/Localizable.strings
-xbalkanbutton/Resources/es.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy balkanbutton/Resources/es.lproj/Localizable.strings93a81748f970b741^5cac1848f970b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/es.lproj/Localizable.strings0000000000000000^638"CopyStringsFile build/balkanbutton.app/es.lproj/Localizable.strings balkanbutton/Resources/es.lproj/Localizable.strings    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/es.lproj -- balkanbutton/Resources/es.lproj/Localizable.strings36"CBB9010F-B554-49CD-AFAF-43B725FADB19-
-
-CCopyStringsFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/se.lproj/Localizable.strings balkanbutton/Resources/se.lproj/Localizable.strings
-s393279817.550119
-e393279817.555013
-r1
-xCopyStringsFile
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/se.lproj/Localizable.strings
-xbalkanbutton/Resources/se.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy balkanbutton/Resources/se.lproj/Localizable.strings5ce68c49f970b741^581c8e49f970b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/se.lproj/Localizable.strings0000000000000000^638"CopyStringsFile build/balkanbutton.app/se.lproj/Localizable.strings balkanbutton/Resources/se.lproj/Localizable.strings    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/se.lproj -- balkanbutton/Resources/se.lproj/Localizable.strings36"25BC5506-DD11-4436-B135-A46BAA997502-
-
-CCpResource balkanbutton/Resources/Capture.bundle build/balkanbutton.app/Capture.bundle
-s393279816.049943
-e393279816.077698
-r1
-xCpResource
-xbalkanbutton/Resources/Capture.bundle
-xbuild/balkanbutton.app/Capture.bundle
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/balkanbutton.app/Capture.bundle7fda0c48f970b741^13f01348f970b741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Capture.bundle000000000080d041^789"CpResource balkanbutton/Resources/Capture.bundle build/balkanbutton.app/Capture.bundle    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/Capture.bundle /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"78A1A93A-3316-49BD-A2F4-B6F1131ECD3E-
-
-CCpResource balkanbutton/Resources/icons/icon-72.png build/balkanbutton.app/icon-72.png
-s393279815.998638
-e393279816.021665
-r1
-xCpResource
-xbalkanbutton/Resources/icons/icon-72.png
-xbuild/balkanbutton.app/icon-72.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/balkanbutton.app/icon-72.png03b6ff47f970b741^639a0548f970b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon-72.png000000000080d041^792"CpResource balkanbutton/Resources/icons/icon-72.png build/balkanbutton.app/icon-72.png    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon-72.png /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"E58B10FC-4097-48B4-AA56-89B0B7C899FF-
-
-CCpResource balkanbutton/Resources/icons/icon-72@2x.png build/balkanbutton.app/icon-72@2x.png
-s393279817.628269
-e393279817.632483
-r1
-xCpResource
-xbalkanbutton/Resources/icons/icon-72@2x.png
-xbuild/balkanbutton.app/icon-72@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/balkanbutton.app/icon-72@2x.png9be7a049f970b741^2311a249f970b741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon-72@2x.png000000000080d041^807"CpResource "balkanbutton/Resources/icons/icon-72@2x.png" "build/balkanbutton.app/icon-72@2x.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon-72@2x.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"DA52CE1E-2AC8-4619-A2BB-F3CF0CBFDA2B-
-
-CCpResource balkanbutton/Resources/icons/icon.png build/balkanbutton.app/icon.png
-s393279816.023170
-e393279816.026337
-r1
-xCpResource
-xbalkanbutton/Resources/icons/icon.png
-xbuild/balkanbutton.app/icon.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/balkanbutton.app/icon.pnga4ff0548f970b741^8fc50648f970b741^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon.png000000000080d041^783"CpResource balkanbutton/Resources/icons/icon.png build/balkanbutton.app/icon.png    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon.png /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"381E5F1D-515A-4949-B34F-DC899B205597-
-
-CCpResource balkanbutton/Resources/icons/icon@2x.png build/balkanbutton.app/icon@2x.png
-s393279816.027816
-e393279816.048188
-r1
-xCpResource
-xbalkanbutton/Resources/icons/icon@2x.png
-xbuild/balkanbutton.app/icon@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/balkanbutton.app/icon@2x.png3c2d0748f970b741^8d990c48f970b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/icon@2x.png000000000080d041^798"CpResource "balkanbutton/Resources/icons/icon@2x.png" "build/balkanbutton.app/icon@2x.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/icons/icon@2x.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"07407443-DB05-4562-9A42-5B0099E5C127-
-
-CCpResource balkanbutton/Resources/splash/Default-568h@2x~iphone.png build/balkanbutton.app/Default-568h@2x~iphone.png
-s393279817.621660
-e393279817.626432
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default-568h@2x~iphone.png
-xbuild/balkanbutton.app/Default-568h@2x~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/balkanbutton.app/Default-568h@2x~iphone.pngda3b9f49f970b741^5169a049f970b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-568h@2x~iphone.png000000000080d041^845"CpResource "balkanbutton/Resources/splash/Default-568h@2x~iphone.png" "build/balkanbutton.app/Default-568h@2x~iphone.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-568h@2x~iphone.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"F76993FA-5E64-4C52-ACCC-2E701F36F93A-
-
-CCpResource balkanbutton/Resources/splash/Default-Landscape@2x~ipad.png build/balkanbutton.app/Default-Landscape@2x~ipad.png
-s393279817.556964
-e393279817.562509
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default-Landscape@2x~ipad.png
-xbuild/balkanbutton.app/Default-Landscape@2x~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/balkanbutton.app/Default-Landscape@2x~ipad.pngf8a58e49f970b741^070a9049f970b741^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Landscape@2x~ipad.png000000000080d041^854"CpResource "balkanbutton/Resources/splash/Default-Landscape@2x~ipad.png" "build/balkanbutton.app/Default-Landscape@2x~ipad.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Landscape@2x~ipad.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"2D0E8C04-0038-441D-A12D-98197DD42008-
-
-CCpResource balkanbutton/Resources/splash/Default-Landscape~ipad.png build/balkanbutton.app/Default-Landscape~ipad.png
-s393279817.572524
-e393279817.577949
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default-Landscape~ipad.png
-xbuild/balkanbutton.app/Default-Landscape~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/balkanbutton.app/Default-Landscape~ipad.pngeca49249f970b741^eb009449f970b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Landscape~ipad.png000000000080d041^845"CpResource "balkanbutton/Resources/splash/Default-Landscape~ipad.png" "build/balkanbutton.app/Default-Landscape~ipad.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Landscape~ipad.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"1123AEA1-A4D7-4DAE-B5AD-0EAA23E522BF-
-
-CCpResource balkanbutton/Resources/splash/Default-Portrait@2x~ipad.png build/balkanbutton.app/Default-Portrait@2x~ipad.png
-s393279817.580392
-e393279817.587797
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default-Portrait@2x~ipad.png
-xbuild/balkanbutton.app/Default-Portrait@2x~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/balkanbutton.app/Default-Portrait@2x~ipad.png9ca59449f970b741^3f8e9649f970b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Portrait@2x~ipad.png000000000080d041^851"CpResource "balkanbutton/Resources/splash/Default-Portrait@2x~ipad.png" "build/balkanbutton.app/Default-Portrait@2x~ipad.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Portrait@2x~ipad.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"47B0B0F6-AC87-45DA-89DB-4F2FF0DFCAA4-
-
-CCpResource balkanbutton/Resources/splash/Default-Portrait~ipad.png build/balkanbutton.app/Default-Portrait~ipad.png
-s393279817.589619
-e393279817.595395
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default-Portrait~ipad.png
-xbuild/balkanbutton.app/Default-Portrait~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy build/balkanbutton.app/Default-Portrait~ipad.pngb4029749f970b741^c0769849f970b741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default-Portrait~ipad.png000000000080d041^842"CpResource "balkanbutton/Resources/splash/Default-Portrait~ipad.png" "build/balkanbutton.app/Default-Portrait~ipad.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default-Portrait~ipad.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"AAC86C3F-6031-4FA0-9176-4E2762DCACC8-
-
-CCpResource balkanbutton/Resources/splash/Default@2x~iphone.png build/balkanbutton.app/Default@2x~iphone.png
-s393279817.596960
-e393279817.603139
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default@2x~iphone.png
-xbuild/balkanbutton.app/Default@2x~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy build/balkanbutton.app/Default@2x~iphone.png861e9949f970b741^65729a49f970b741^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default@2x~iphone.png000000000080d041^830"CpResource "balkanbutton/Resources/splash/Default@2x~iphone.png" "build/balkanbutton.app/Default@2x~iphone.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default@2x~iphone.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"A69ADD10-7671-4B2D-9CD8-96D8F40815BD-
-
-CCpResource balkanbutton/Resources/splash/Default~iphone.png build/balkanbutton.app/Default~iphone.png
-s393279817.605921
-e393279817.618298
-r1
-xCpResource
-xbalkanbutton/Resources/splash/Default~iphone.png
-xbuild/balkanbutton.app/Default~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy build/balkanbutton.app/Default~iphone.pnge02a9b49f970b741^eb539e49f970b741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Default~iphone.png000000000080d041^821"CpResource "balkanbutton/Resources/splash/Default~iphone.png" "build/balkanbutton.app/Default~iphone.png"    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/Resources/splash/Default~iphone.png" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"2F5BED50-0A17-4AE5-8933-3428ED4A2D3B-
-
-CCpResource balkanbutton/config.xml build/balkanbutton.app/config.xml
-s393279815.985451
-e393279815.996778
-r1
-xCpResource
-xbalkanbutton/config.xml
-xbuild/balkanbutton.app/config.xml
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy build/balkanbutton.app/config.xml0c56fc47f970b741^3352ff47f970b741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/config.xml000000000080d041^757"CpResource balkanbutton/config.xml build/balkanbutton.app/config.xml    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/config.xml /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"20A8EF41-1357-45CD-8C41-204E8A12E905-
-
-CGenerateDSYMFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton
-s393279818.264602
-e393279818.381208
-r1
-xGenerateDSYMFile
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Generate /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM03cd434af970b741^32ad614af970b741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM000000000080d041^651"GenerateDSYMFile build/balkanbutton.app.dSYM build/balkanbutton.app/balkanbutton    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton -o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app.dSYM36"D06EFAC7-8243-427A-A16B-789C5BA290B8-
-
-CLd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton normal i386
-s393279818.132523
-e393279818.257066
-r1
-xLd
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Link /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton6c04224af970b741^ecdf414af970b741^---0#0#0#--1743"Ld build/balkanbutton.app/balkanbutton normal i386    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -F/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -filelist /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/balkanbutton.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework AssetsLibrary /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/balkanbutton36"20582F4B-17A4-4943-95EA-3C7E4578A8BA-
-
-CPhaseScriptExecution "Copy www directory" /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Script-304B58A110DAC018002A0835.sh
-s393279815.825077
-e393279815.953426
-r1
-xPhaseScriptExecution
-xCopy www directory
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Script-304B58A110DAC018002A0835.sh
-o
-oreal	0m0.093s
-ouser	0m0.027s
-osys	0m0.039s
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'cbd5d347f970b741^2027f447f970b741^-42"real	0m0.093suser	0m0.027ssys	0m0.039s3(21%IDEActivityLogMessage2@14"real	0m0.093s-393279815#1#14#-0#-----2@14"user	0m0.027s-393279815#15#14#-0#-----2@13"sys	0m0.039s-393279815#29#13#-0#-----0#0#0#--21557"PhaseScriptExecution "Copy www directory" build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Script-304B58A110DAC018002A0835.sh    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER simped    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv BUILD_ROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv CACHE_ROOT /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Release    setenv CONFIGURATION_BUILD_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv CONFIGURATION_TEMP_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator    setenv CONTENTS_FOLDER_PATH balkanbutton.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP YES    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH balkanbutton.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/balkanbutton.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME balkanbutton.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH balkanbutton.app/Executables    setenv EXECUTABLE_FOLDER_PATH balkanbutton.app    setenv EXECUTABLE_NAME balkanbutton    setenv EXECUTABLE_PATH balkanbutton.app/balkanbutton    setenv FILE_LIST /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH balkanbutton.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME balkanbutton.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER balkanbutton/balkanbutton-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include\" \"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/usr/local/lib/include\" \"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/UninstalledProducts/include\" \"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE balkanbutton/balkanbutton-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH balkanbutton.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH balkanbutton.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/balkanbutton.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER simped    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/balkanbutton.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH balkanbutton.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal/i386/balkanbutton.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH balkanbutton.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12C54    setenv MAC_OS_X_VERSION_ACTUAL 1082    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0802    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Objects-normal    setenv OBJROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH balkanbutton.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/PkgInfo    setenv PKGINFO_PATH balkanbutton.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60100    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH balkanbutton.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH balkanbutton.app/PrivateHeaders    setenv PRODUCT_NAME balkanbutton    setenv PRODUCT_SETTINGS_PATH /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/balkanbutton-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT balkanbutton    setenv PROJECT_DERIVED_FILE_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/DerivedSources    setenv PROJECT_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PROJECT_FILE_PATH /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton.xcodeproj    setenv PROJECT_NAME balkanbutton    setenv PROJECT_TEMP_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build    setenv PROJECT_TEMP_ROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv PUBLIC_HEADERS_FOLDER_PATH balkanbutton.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH balkanbutton.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_NAME iphonesimulator6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH balkanbutton.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH balkanbutton.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv SRCROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME balkanbutton    setenv TARGET_BUILD_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv TARGET_NAME balkanbutton    setenv TARGET_TEMP_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build    setenv TEMP_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build    setenv TEMP_FILES_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build    setenv TEMP_FILE_DIR /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build    setenv TEMP_ROOT /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH balkanbutton.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER simped    setenv USER_APPS_DIR /Users/simped/Applications    setenv USER_LIBRARY_DIR /Users/simped/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH balkanbutton.app/version.plist    setenv VERSION_INFO_BUILDER simped    setenv VERSION_INFO_FILE balkanbutton_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:balkanbutton  PROJECT:balkanbutton-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME balkanbutton.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H1003    setenv XCODE_VERSION_ACTUAL 0462    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/Script-304B58A110DAC018002A0835.sh36"0302F8B1-23C5-4B49-A82C-F75C82394317-
-
-CProcessInfoPlistFile /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Info.plist balkanbutton/balkanbutton-Info.plist
-s393279815.809623
-e393279815.816190
-r1
-xProcessInfoPlistFile
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Info.plist
-xbalkanbutton/balkanbutton-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Process balkanbutton/balkanbutton-Info.plist2e57cf47f970b741^c922d147f970b741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/balkanbutton-Info.plist0000000000000000^703"ProcessInfoPlistFile build/balkanbutton.app/Info.plist balkanbutton/balkanbutton-Info.plist    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-infoPlistUtility balkanbutton/balkanbutton-Info.plist -genpkginfo /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app/Info.plist36"0A1887DC-0BB6-4DE7-9B66-5F4E73E440FC-
-
-CProcessPCH /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.pth balkanbutton/balkanbutton-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s393279817.649482
-e393279817.913399
-r1
-xProcessPCH
-x/var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.pth
-xbalkanbutton/balkanbutton-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile balkanbutton/balkanbutton-Prefix.pchd15da649f970b741^65e3e949f970b741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/balkanbutton-Prefix.pch0000000000000000^3783"ProcessPCH /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.pth balkanbutton/balkanbutton-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-generated-files.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-own-target-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-all-target-headers.hmap -iquote /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/balkanbutton-project-headers.hmap -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/usr/local/lib/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/UninstalledProducts/include -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources/i386 -I/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.build/Release-iphonesimulator/balkanbutton.build/DerivedSources -F/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build --serialize-diagnostics /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.dia -c /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/balkanbutton/balkanbutton-Prefix.pch -o /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/hl/07sjl9vx2053gg_df2pybqqr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/balkanbutton-Prefix-anpicdkegsordgbpguawwkjbexyc/balkanbutton-Prefix.pch.d36"2AB6E2ED-0234-4203-95DC-1A77D96EC38C-
-
-CTouch /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app
-s393279818.390047
-e393279818.396372
-r1
-xTouch
-x/Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Touch /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.appffe8634af970b741^0e83654af970b741^---0#0#0#--415"Touch build/balkanbutton.app    cd /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /usr/bin/touch -c /Users/simped/Documents/balkanbutton/BalkanButton/targets/ios/build/balkanbutton.app36"69B2FA0E-5317-4ED7-8B4F-279373F48106-
-
